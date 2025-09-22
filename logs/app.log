@@ -1,0 +1,153 @@
+2025-09-21 20:49:51,734 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 20:49:51,738 - __main__ - INFO - Configurando CORS
+2025-09-21 20:49:51,739 - __main__ - INFO - Registrando routers
+2025-09-21 20:49:51,760 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 20:49:51,909 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 20:50:12,478 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 20:50:12,483 - __main__ - INFO - Configurando CORS
+2025-09-21 20:50:12,483 - __main__ - INFO - Registrando routers
+2025-09-21 20:50:12,503 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 20:50:14,801 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 20:50:43,078 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 20:50:48,121 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 20:51:09,146 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 20:51:09,148 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 20:51:38,472 - routers.GET - INFO - Solicitud para obtener tarea con ID: 4
+2025-09-21 20:51:38,473 - routers.GET - INFO - Tarea 4 encontrada en tareas activas
+2025-09-21 20:55:04,566 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 20:55:04,570 - __main__ - INFO - Configurando CORS
+2025-09-21 20:55:04,570 - __main__ - INFO - Registrando routers
+2025-09-21 20:55:04,590 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 20:55:04,746 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 20:55:18,379 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 20:55:18,383 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 20:55:19,070 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 20:55:29,392 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-21 20:55:30,304 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 20:55:30,305 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 20:55:37,511 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 20:55:50,346 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 20:55:58,868 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 20:55:58,869 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 20:56:14,510 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 20:56:14,511 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 20:56:44,787 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-21 20:56:44,789 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-21 21:04:41,768 - main - INFO - Creando aplicación FastAPI
+2025-09-21 21:04:41,769 - main - INFO - Configurando CORS
+2025-09-21 21:04:41,769 - main - INFO - Registrando routers
+2025-09-21 21:04:41,780 - main - INFO - Montando archivos estáticos
+2025-09-21 21:04:42,272 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 21:04:42,274 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 21:04:42,280 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,160 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-21 21:04:43,161 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-21 21:04:43,168 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,262 - routers.GET - INFO - Solicitud para obtener tarea con ID: 999
+2025-09-21 21:04:43,266 - routers.GET - INFO - Tarea 999 no encontrada en activas, buscando en eliminadas
+2025-09-21 21:04:43,267 - routers.GET - WARNING - Tarea 999 no encontrada en ningún archivo
+2025-09-21 21:04:43,272 - httpx - INFO - HTTP Request: GET http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:04:43,297 - routers.GET - INFO - Solicitud para obtener tarea con ID: 3
+2025-09-21 21:04:43,299 - routers.GET - INFO - Tarea 3 encontrada en tareas activas
+2025-09-21 21:04:43,304 - httpx - INFO - HTTP Request: GET http://testserver/tareas/3 "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,348 - routers.POST - INFO - Solicitud para crear tarea: Nueva Tarea
+2025-09-21 21:04:43,350 - routers.POST - INFO - ID asignado: 1
+2025-09-21 21:04:43,352 - routers.POST - INFO - Tarea creada exitosamente con ID: 1
+2025-09-21 21:04:43,357 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,371 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 422 Unprocessable Entity"
+2025-09-21 21:04:43,382 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 1
+2025-09-21 21:04:43,399 - routers.PUT - INFO - Tarea 1 actualizada completamente
+2025-09-21 21:04:43,405 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,424 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 999
+2025-09-21 21:04:43,442 - routers.PUT - WARNING - Tarea 999 no encontrada para actualización completa
+2025-09-21 21:04:43,444 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:04:43,461 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 1
+2025-09-21 21:04:43,463 - routers.PATCH - INFO - Tarea 1 actualizada parcialmente
+2025-09-21 21:04:43,468 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,515 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 999
+2025-09-21 21:04:43,519 - routers.PATCH - WARNING - Tarea 999 no encontrada para actualización parcial
+2025-09-21 21:04:43,523 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:04:43,543 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 1
+2025-09-21 21:04:43,544 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:04:43,546 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-21 21:04:43,547 - routers.DELETE - INFO - Tarea 1 eliminada exitosamente
+2025-09-21 21:04:43,553 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,576 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 999
+2025-09-21 21:04:43,600 - routers.DELETE - WARNING - Tarea 999 no encontrada para eliminación
+2025-09-21 21:04:43,604 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:04:43,628 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:04:43,631 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-09-21 21:04:43,646 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-21 21:04:44,020 - httpx - INFO - HTTP Request: GET http://testserver/app "HTTP/1.1 200 OK"
+2025-09-21 21:04:44,026 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-21 21:04:44,054 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-21 21:04:44,073 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:04:44,074 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-21 21:04:44,225 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:04:44,226 - utils.MDguardar_eliminada - ERROR - Error al guardar tarea eliminada: Error de escritura
+2025-09-21 21:04:44,233 - utils.MDleer_eliminadas_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-21 21:07:23,582 - main - INFO - Creando aplicación FastAPI
+2025-09-21 21:07:23,583 - main - INFO - Configurando CORS
+2025-09-21 21:07:23,584 - main - INFO - Registrando routers
+2025-09-21 21:07:23,595 - main - INFO - Montando archivos estáticos
+2025-09-21 21:07:23,846 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 21:07:23,847 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 21:07:23,851 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,218 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-21 21:07:24,219 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-21 21:07:24,223 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,428 - routers.GET - INFO - Solicitud para obtener tarea con ID: 999
+2025-09-21 21:07:24,430 - routers.GET - INFO - Tarea 999 no encontrada en activas, buscando en eliminadas
+2025-09-21 21:07:24,431 - routers.GET - WARNING - Tarea 999 no encontrada en ningún archivo
+2025-09-21 21:07:24,435 - httpx - INFO - HTTP Request: GET http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:07:24,471 - routers.GET - INFO - Solicitud para obtener tarea con ID: 3
+2025-09-21 21:07:24,474 - routers.GET - INFO - Tarea 3 encontrada en tareas activas
+2025-09-21 21:07:24,557 - httpx - INFO - HTTP Request: GET http://testserver/tareas/3 "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,604 - routers.POST - INFO - Solicitud para crear tarea: Nueva Tarea
+2025-09-21 21:07:24,605 - routers.POST - INFO - ID asignado: 1
+2025-09-21 21:07:24,606 - routers.POST - INFO - Tarea creada exitosamente con ID: 1
+2025-09-21 21:07:24,612 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,747 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 422 Unprocessable Entity"
+2025-09-21 21:07:24,761 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 1
+2025-09-21 21:07:24,779 - routers.PUT - INFO - Tarea 1 actualizada completamente
+2025-09-21 21:07:24,784 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,879 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 999
+2025-09-21 21:07:24,893 - routers.PUT - WARNING - Tarea 999 no encontrada para actualización completa
+2025-09-21 21:07:24,896 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:07:24,910 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 1
+2025-09-21 21:07:24,912 - routers.PATCH - INFO - Tarea 1 actualizada parcialmente
+2025-09-21 21:07:24,915 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:07:24,942 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 999
+2025-09-21 21:07:24,944 - routers.PATCH - WARNING - Tarea 999 no encontrada para actualización parcial
+2025-09-21 21:07:24,947 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:07:24,962 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 1
+2025-09-21 21:07:24,963 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:07:24,964 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-21 21:07:24,965 - routers.DELETE - INFO - Tarea 1 eliminada exitosamente
+2025-09-21 21:07:24,968 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-21 21:07:25,061 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 999
+2025-09-21 21:07:25,064 - routers.DELETE - WARNING - Tarea 999 no encontrada para eliminación
+2025-09-21 21:07:25,068 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-21 21:07:25,078 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:07:25,082 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-09-21 21:07:25,092 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-21 21:07:25,350 - httpx - INFO - HTTP Request: GET http://testserver/app "HTTP/1.1 200 OK"
+2025-09-21 21:07:25,356 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-21 21:07:25,402 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-21 21:07:25,447 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:07:25,455 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-21 21:07:25,699 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-21 21:07:25,699 - utils.MDguardar_eliminada - ERROR - Error al guardar tarea eliminada: Error de escritura
+2025-09-21 21:07:25,704 - utils.MDleer_eliminadas_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-21 21:07:35,804 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 21:07:35,806 - __main__ - INFO - Configurando CORS
+2025-09-21 21:07:35,806 - __main__ - INFO - Registrando routers
+2025-09-21 21:07:35,824 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 21:07:36,302 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 21:08:43,090 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:08:53,149 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 21:08:53,150 - routers.GET - INFO - Tareas cargadas: 4 items
+2025-09-21 21:09:01,871 - routers.POST - INFO - Solicitud para crear tarea: Tarea desde curl
+2025-09-21 21:09:01,889 - routers.POST - INFO - ID asignado: 9
+2025-09-21 21:09:01,891 - routers.POST - INFO - Tarea creada exitosamente con ID: 9
+2025-09-21 21:09:21,820 - routers.OTHERS - INFO - Solicitud para servir el frontend

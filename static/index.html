@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Gestor de Tareas - FastAPI</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🚀 Gestor de Tareas</h1>
+        <p>API FastAPI con Frontend interactivo</p>
+      </div>
+
+      <div class="content">
+        <!-- Formulario para crear/editar tareas -->
+        <div class="form-section">
+          <h2 id="form-title">📝 Crear Nueva Tarea</h2>
+          <form id="task-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="titulo">Título de la tarea:</label>
+                <input type="text" id="titulo" name="titulo" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="descripcion">Descripción:</label>
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                placeholder="Describe tu tarea aquí..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="completada" name="completada" />
+              <label for="completada">Tarea completada</label>
+            </div>
+
+            <input type="hidden" id="task-id" name="task-id" />
+
+            <button type="submit" class="btn" id="submit-btn">
+              Crear Tarea
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning"
+              id="cancel-btn"
+              style="display: none"
+            >
+              Cancelar
+            </button>
+          </form>
+        </div>
+
+        <!-- Controles -->
+        <div class="form-section">
+          <h2>🛠️ Controles</h2>
+          <button class="btn btn-success" onclick="cargarTareas()">
+            🔄 Recargar Tareas
+          </button>
+          <button class="btn btn-warning" onclick="limpiarFormulario()">
+            🧹 Limpiar Formulario
+          </button>
+        </div>
+
+        <!-- Área de mensajes -->
+        <div id="message-area"></div>
+
+        <!-- Lista de tareas -->
+        <div class="tasks-section">
+          <h2>📋 Lista de Tareas</h2>
+          <div id="tasks-container">
+            <div class="loading">Cargando tareas...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

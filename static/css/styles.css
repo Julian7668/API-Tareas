@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(45deg, #2196f3, #21cbf3);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 30px;
+}
+
+.form-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 4px solid #2196f3;
+}
+
+.form-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn {
+  background: linear-gradient(45deg, #2196f3, #21cbf3);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #f44336, #ff6b6b);
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #ff9800, #ffb74d);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #4caf50, #66bb6a);
+}
+
+.tasks-section {
+  margin-top: 30px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-card.completed {
+  background: #f1f8e9;
+  border-color: #4caf50;
+}
+
+.task-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-id {
+  background: #2196f3;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.task-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.task-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status-pending {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-completed {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .task-actions {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 3,
+    "titulo": "Crear proyecto personal",
+    "descripcion": "Desarrollar una aplicación web completa usando Python y FastAPI",
+    "completada": true
+  },
+  {
+    "id": 4,
+    "titulo": "Aprender ingles",
+    "descripcion": "Estudiar la gramatica del idioma a profundidad con soporte del libro mastery",
+    "completada": false
+  },
+  {
+    "id": 8,
+    "titulo": "Celular",
+    "descripcion": "Libro, Estudiar",
+    "completada": true
+  },
+  {
+    "id": 1,
+    "titulo": "Nueva Tarea",
+    "descripcion": "Descripción nueva",
+    "completada": false
+  },
+  {
+    "id": 9,
+    "titulo": "Tarea desde curl",
+    "descripcion": "Probando la API",
+    "completada": false
+  }
+]
