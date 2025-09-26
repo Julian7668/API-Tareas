@@ -26,19 +26,5 @@
     "descripcion": "addsad",
     "completada": true,
     "fecha_eliminacion": "2025-09-21T19:54:05.734455"
-  },
-  {
-    "id": 1,
-    "titulo": "Tarea Actualizada",
-    "descripcion": "Descripción actualizada",
-    "completada": true,
-    "fecha_eliminacion": "2025-09-21T21:04:43.545866"
-  },
-  {
-    "id": 1,
-    "titulo": "Tarea Actualizada",
-    "descripcion": "Descripción actualizada",
-    "completada": true,
-    "fecha_eliminacion": "2025-09-21T21:07:24.963488"
   }
 ]

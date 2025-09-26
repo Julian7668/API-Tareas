@@ -6,11 +6,15 @@ from fastapi.staticfiles import StaticFiles
 
 from routers import GET, POST, PUT, PATCH, DELETE, OTHERS
 
+# Crear directorio de logs si no existe
+log_dir = os.path.join(os.path.dirname(__file__), "logs")
+os.makedirs(log_dir, exist_ok=True)
+
 # Configurar logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("logs/app.log"), logging.StreamHandler()],
+    handlers=[logging.FileHandler(os.path.join(log_dir, "app.log")), logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 

@@ -151,3 +151,83 @@
 2025-09-21 21:09:01,889 - routers.POST - INFO - ID asignado: 9
 2025-09-21 21:09:01,891 - routers.POST - INFO - Tarea creada exitosamente con ID: 9
 2025-09-21 21:09:21,820 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-21 21:56:09,468 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-21 21:56:09,471 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-21 21:56:20,903 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-21 21:56:20,904 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-21 21:56:22,640 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:56:32,666 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:56:33,570 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 21:59:40,831 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 21:59:40,832 - __main__ - INFO - Configurando CORS
+2025-09-21 21:59:40,833 - __main__ - INFO - Registrando routers
+2025-09-21 21:59:40,845 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 21:59:40,958 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 21:59:49,545 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 22:00:09,481 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:00:09,487 - __main__ - INFO - Configurando CORS
+2025-09-21 22:00:09,488 - __main__ - INFO - Registrando routers
+2025-09-21 22:00:09,522 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:00:09,679 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 22:00:51,323 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:00:51,324 - __main__ - INFO - Configurando CORS
+2025-09-21 22:00:51,324 - __main__ - INFO - Registrando routers
+2025-09-21 22:00:51,337 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:00:51,451 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 22:02:41,689 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:02:41,693 - __main__ - INFO - Configurando CORS
+2025-09-21 22:02:41,694 - __main__ - INFO - Registrando routers
+2025-09-21 22:02:41,730 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:02:41,885 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 22:03:36,611 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:03:36,612 - __main__ - INFO - Configurando CORS
+2025-09-21 22:03:36,612 - __main__ - INFO - Registrando routers
+2025-09-21 22:03:36,632 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:03:36,806 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8001
+2025-09-21 22:04:12,984 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 22:05:00,245 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:05:00,249 - __main__ - INFO - Configurando CORS
+2025-09-21 22:05:00,250 - __main__ - INFO - Registrando routers
+2025-09-21 22:05:00,280 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:05:00,430 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8001
+2025-09-21 22:05:49,377 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:05:49,378 - __main__ - INFO - Configurando CORS
+2025-09-21 22:05:49,379 - __main__ - INFO - Registrando routers
+2025-09-21 22:05:49,391 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:05:49,511 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8002
+2025-09-21 22:06:12,836 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:06:12,840 - __main__ - INFO - Configurando CORS
+2025-09-21 22:06:12,841 - __main__ - INFO - Registrando routers
+2025-09-21 22:06:12,870 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:06:13,101 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8002
+2025-09-21 22:06:51,402 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:06:51,406 - __main__ - INFO - Configurando CORS
+2025-09-21 22:06:51,407 - __main__ - INFO - Registrando routers
+2025-09-21 22:06:51,437 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:06:51,594 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 22:10:15,826 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:10:15,827 - __main__ - INFO - Configurando CORS
+2025-09-21 22:10:15,827 - __main__ - INFO - Registrando routers
+2025-09-21 22:10:15,839 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:10:15,947 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-21 22:13:12,426 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-21 22:13:32,729 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-21 22:13:32,734 - __main__ - INFO - Configurando CORS
+2025-09-21 22:13:32,734 - __main__ - INFO - Registrando routers
+2025-09-21 22:13:32,770 - __main__ - INFO - Montando archivos estáticos
+2025-09-21 22:13:32,919 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-26 18:38:12,211 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-26 18:38:12,215 - __main__ - INFO - Configurando CORS
+2025-09-26 18:38:12,215 - __main__ - INFO - Registrando routers
+2025-09-26 18:38:12,244 - __main__ - INFO - Montando archivos estáticos
+2025-09-26 18:38:13,547 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-26 18:38:26,059 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-26 18:38:31,772 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:38:31,774 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-26 18:39:36,570 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-26 18:39:36,574 - __main__ - INFO - Configurando CORS
+2025-09-26 18:39:36,575 - __main__ - INFO - Registrando routers
+2025-09-26 18:39:36,605 - __main__ - INFO - Montando archivos estáticos
+2025-09-26 18:39:36,756 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-26 18:39:39,703 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:39:39,719 - routers.GET - INFO - Tareas cargadas: 5 items
