@@ -231,3 +231,281 @@
 2025-09-26 18:39:36,756 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
 2025-09-26 18:39:39,703 - routers.GET - INFO - Solicitud para obtener todas las tareas
 2025-09-26 18:39:39,719 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-26 18:41:27,230 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-26 18:49:20,775 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:49:20,776 - API.main - INFO - Configurando CORS
+2025-09-26 18:49:20,776 - API.main - INFO - Registrando routers
+2025-09-26 18:49:20,788 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:50:39,139 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:50:39,140 - API.main - INFO - Configurando CORS
+2025-09-26 18:50:39,141 - API.main - INFO - Registrando routers
+2025-09-26 18:50:39,153 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:50:39,429 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:50:39,431 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-26 18:50:39,437 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 18:50:40,494 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 422 Unprocessable Entity"
+2025-09-26 18:50:41,563 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-26 18:50:41,566 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-09-26 18:50:41,574 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-26 18:50:41,766 - httpx - INFO - HTTP Request: GET http://testserver/app "HTTP/1.1 200 OK"
+2025-09-26 18:50:41,770 - API.utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 18:50:41,792 - API.utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-26 18:50:41,846 - API.utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-26 18:50:41,847 - API.utils.MDleer_eliminadas_json - ERROR - Error al decodificar JSON en {DELETED_JSON}: Expecting value: line 1 column 1 (char 0)
+2025-09-26 18:50:41,849 - API.utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-26 18:50:41,927 - API.utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 1
+2025-09-26 18:50:41,931 - API.utils.MDleer_eliminadas_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 18:51:35,556 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:51:35,557 - API.main - INFO - Configurando CORS
+2025-09-26 18:51:35,558 - API.main - INFO - Registrando routers
+2025-09-26 18:51:35,569 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:51:35,945 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:51:35,959 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-26 18:51:35,963 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 18:53:23,228 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:53:23,229 - API.main - INFO - Configurando CORS
+2025-09-26 18:53:23,229 - API.main - INFO - Registrando routers
+2025-09-26 18:53:23,240 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:53:23,355 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:53:23,356 - routers.GET - INFO - Tareas cargadas: 5 items
+2025-09-26 18:53:23,360 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 18:54:21,957 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:54:21,958 - API.main - INFO - Configurando CORS
+2025-09-26 18:54:21,958 - API.main - INFO - Registrando routers
+2025-09-26 18:54:21,970 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:54:22,091 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:54:22,092 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 18:54:22,096 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 18:54:29,899 - API.main - INFO - Creando aplicación FastAPI
+2025-09-26 18:54:29,901 - API.main - INFO - Configurando CORS
+2025-09-26 18:54:29,901 - API.main - INFO - Registrando routers
+2025-09-26 18:54:29,914 - API.main - INFO - Montando archivos estáticos
+2025-09-26 18:54:30,106 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 18:54:30,107 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 18:54:30,110 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 18:54:30,123 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 18:54:30,124 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-26 18:54:30,126 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 18:54:30,899 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 422 Unprocessable Entity"
+2025-09-26 18:54:30,909 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 1
+2025-09-26 18:54:30,911 - routers.PUT - INFO - Tarea 1 actualizada completamente
+2025-09-26 18:54:30,915 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 18:54:31,005 - routers.PUT - INFO - Solicitud para actualizar tarea completa con ID: 999
+2025-09-26 18:54:31,019 - routers.PUT - WARNING - Tarea 999 no encontrada para actualización completa
+2025-09-26 18:54:31,021 - httpx - INFO - HTTP Request: PUT http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-26 18:54:31,033 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 1
+2025-09-26 18:54:31,035 - routers.PATCH - INFO - Tarea 1 actualizada parcialmente
+2025-09-26 18:54:31,038 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 18:54:31,062 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 999
+2025-09-26 18:54:31,065 - routers.PATCH - WARNING - Tarea 999 no encontrada para actualización parcial
+2025-09-26 18:54:31,067 - httpx - INFO - HTTP Request: PATCH http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-26 18:54:31,078 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 1
+2025-09-26 18:54:31,081 - routers.DELETE - INFO - Tarea 1 eliminada exitosamente
+2025-09-26 18:54:31,084 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 18:54:31,221 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 999
+2025-09-26 18:54:31,237 - routers.DELETE - WARNING - Tarea 999 no encontrada para eliminación
+2025-09-26 18:54:31,239 - httpx - INFO - HTTP Request: DELETE http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-26 18:54:31,248 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-26 18:54:31,250 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-09-26 18:54:31,258 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-26 18:54:31,469 - httpx - INFO - HTTP Request: GET http://testserver/app "HTTP/1.1 200 OK"
+2025-09-26 18:54:31,473 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 18:54:31,494 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-26 18:54:32,353 - utils.MDleer_eliminadas_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 18:58:34,716 - main - INFO - Creando aplicación FastAPI
+2025-09-26 18:58:34,723 - main - INFO - Configurando CORS
+2025-09-26 18:58:34,724 - main - INFO - Registrando routers
+2025-09-26 18:58:34,756 - main - INFO - Montando archivos estáticos
+2025-09-26 19:01:15,919 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:01:15,923 - main - INFO - Configurando CORS
+2025-09-26 19:01:15,924 - main - INFO - Registrando routers
+2025-09-26 19:01:15,963 - main - INFO - Montando archivos estáticos
+2025-09-26 19:05:49,058 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:05:49,063 - main - INFO - Configurando CORS
+2025-09-26 19:05:49,063 - main - INFO - Registrando routers
+2025-09-26 19:05:49,092 - main - INFO - Montando archivos estáticos
+2025-09-26 19:12:36,226 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:12:36,230 - main - INFO - Configurando CORS
+2025-09-26 19:12:36,231 - main - INFO - Registrando routers
+2025-09-26 19:12:36,262 - main - INFO - Montando archivos estáticos
+2025-09-26 19:27:41,630 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:27:41,634 - main - INFO - Configurando CORS
+2025-09-26 19:27:41,635 - main - INFO - Registrando routers
+2025-09-26 19:27:41,666 - main - INFO - Montando archivos estáticos
+2025-09-26 19:43:04,200 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:43:04,201 - main - INFO - Configurando CORS
+2025-09-26 19:43:04,202 - main - INFO - Registrando routers
+2025-09-26 19:43:04,214 - main - INFO - Montando archivos estáticos
+2025-09-26 19:43:04,387 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 19:43:04,388 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 19:43:04,393 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:45:34,072 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:45:34,073 - main - INFO - Configurando CORS
+2025-09-26 19:45:34,073 - main - INFO - Registrando routers
+2025-09-26 19:45:34,085 - main - INFO - Montando archivos estáticos
+2025-09-26 19:45:34,172 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 19:45:34,173 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 19:45:34,178 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:45:34,190 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 19:45:34,191 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-26 19:45:34,194 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 19:46:05,640 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:46:05,641 - main - INFO - Configurando CORS
+2025-09-26 19:46:05,642 - main - INFO - Registrando routers
+2025-09-26 19:46:05,653 - main - INFO - Montando archivos estáticos
+2025-09-26 19:46:05,754 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 19:46:05,755 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 19:46:05,759 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:46:05,777 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 19:46:05,778 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-26 19:46:05,781 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 19:46:05,795 - routers.GET - INFO - Solicitud para obtener tarea con ID: 999
+2025-09-26 19:46:05,795 - routers.GET - INFO - Tarea 999 no encontrada en activas, buscando en eliminadas
+2025-09-26 19:46:05,796 - routers.GET - WARNING - Tarea 999 no encontrada en ningún archivo
+2025-09-26 19:46:05,798 - httpx - INFO - HTTP Request: GET http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-26 19:46:05,809 - routers.GET - INFO - Solicitud para obtener tarea con ID: 3
+2025-09-26 19:46:05,810 - routers.GET - INFO - Tarea 3 no encontrada en activas, buscando en eliminadas
+2025-09-26 19:46:05,810 - routers.GET - WARNING - Tarea 3 encontrada en eliminadas, devolviendo 410
+2025-09-26 19:46:05,813 - httpx - INFO - HTTP Request: GET http://testserver/tareas/3 "HTTP/1.1 410 Gone"
+2025-09-26 19:46:14,073 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:46:14,074 - main - INFO - Configurando CORS
+2025-09-26 19:46:14,075 - main - INFO - Registrando routers
+2025-09-26 19:46:14,085 - main - INFO - Montando archivos estáticos
+2025-09-26 19:46:14,183 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 19:46:14,214 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-26 19:46:14,723 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 422 Unprocessable Entity"
+2025-09-26 19:46:34,208 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:46:34,209 - main - INFO - Configurando CORS
+2025-09-26 19:46:34,210 - main - INFO - Registrando routers
+2025-09-26 19:46:34,220 - main - INFO - Montando archivos estáticos
+2025-09-26 19:46:34,329 - routers.POST - INFO - Solicitud para crear tarea: Nueva Tarea
+2025-09-26 19:46:34,331 - routers.POST - INFO - ID asignado: 10
+2025-09-26 19:46:34,332 - routers.POST - INFO - Tarea creada exitosamente con ID: 10
+2025-09-26 19:46:34,337 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:47:00,843 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:47:00,844 - main - INFO - Configurando CORS
+2025-09-26 19:47:00,845 - main - INFO - Registrando routers
+2025-09-26 19:47:00,856 - main - INFO - Montando archivos estáticos
+2025-09-26 19:47:20,907 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:47:20,909 - main - INFO - Configurando CORS
+2025-09-26 19:47:20,909 - main - INFO - Registrando routers
+2025-09-26 19:47:20,920 - main - INFO - Montando archivos estáticos
+2025-09-26 19:47:21,022 - routers.POST - INFO - Solicitud para crear tarea: Nueva Tarea
+2025-09-26 19:47:21,023 - routers.POST - INFO - ID asignado: 1
+2025-09-26 19:47:21,024 - routers.POST - INFO - Tarea creada exitosamente con ID: 1
+2025-09-26 19:47:21,029 - httpx - INFO - HTTP Request: POST http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:47:29,174 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:47:29,175 - main - INFO - Configurando CORS
+2025-09-26 19:47:29,176 - main - INFO - Registrando routers
+2025-09-26 19:47:29,187 - main - INFO - Montando archivos estáticos
+2025-09-26 19:47:44,124 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:47:44,125 - main - INFO - Configurando CORS
+2025-09-26 19:47:44,126 - main - INFO - Registrando routers
+2025-09-26 19:47:44,137 - main - INFO - Montando archivos estáticos
+2025-09-26 19:47:44,249 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 19:47:44,250 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 19:47:44,254 - httpx - INFO - HTTP Request: GET http://testserver/tareas "HTTP/1.1 200 OK"
+2025-09-26 19:47:44,268 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 19:47:44,269 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-26 19:47:44,272 - httpx - INFO - HTTP Request: GET http://testserver/tareas/1 "HTTP/1.1 200 OK"
+2025-09-26 19:47:44,284 - routers.GET - INFO - Solicitud para obtener tarea con ID: 999
+2025-09-26 19:47:44,285 - routers.GET - INFO - Tarea 999 no encontrada en activas, buscando en eliminadas
+2025-09-26 19:47:44,285 - routers.GET - WARNING - Tarea 999 no encontrada en ningún archivo
+2025-09-26 19:47:44,288 - httpx - INFO - HTTP Request: GET http://testserver/tareas/999 "HTTP/1.1 404 Not Found"
+2025-09-26 19:47:44,299 - routers.GET - INFO - Solicitud para obtener tarea con ID: 3
+2025-09-26 19:47:44,300 - routers.GET - INFO - Tarea 3 no encontrada en activas, buscando en eliminadas
+2025-09-26 19:47:44,300 - routers.GET - WARNING - Tarea 3 encontrada en eliminadas, devolviendo 410
+2025-09-26 19:47:44,303 - httpx - INFO - HTTP Request: GET http://testserver/tareas/3 "HTTP/1.1 410 Gone"
+2025-09-26 19:47:44,307 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 19:47:44,331 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-26 19:58:39,942 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:58:39,944 - main - INFO - Configurando CORS
+2025-09-26 19:58:39,945 - main - INFO - Registrando routers
+2025-09-26 19:58:39,956 - main - INFO - Montando archivos estáticos
+2025-09-26 19:59:24,440 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:59:24,441 - main - INFO - Configurando CORS
+2025-09-26 19:59:24,442 - main - INFO - Registrando routers
+2025-09-26 19:59:24,453 - main - INFO - Montando archivos estáticos
+2025-09-26 19:59:47,047 - main - INFO - Creando aplicación FastAPI
+2025-09-26 19:59:47,048 - main - INFO - Configurando CORS
+2025-09-26 19:59:47,048 - main - INFO - Registrando routers
+2025-09-26 19:59:47,059 - main - INFO - Montando archivos estáticos
+2025-09-26 20:00:21,641 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:00:21,642 - main - INFO - Configurando CORS
+2025-09-26 20:00:21,643 - main - INFO - Registrando routers
+2025-09-26 20:00:21,653 - main - INFO - Montando archivos estáticos
+2025-09-26 20:01:05,174 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:01:05,175 - main - INFO - Configurando CORS
+2025-09-26 20:01:05,175 - main - INFO - Registrando routers
+2025-09-26 20:01:05,186 - main - INFO - Montando archivos estáticos
+2025-09-26 20:01:42,799 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:01:42,800 - main - INFO - Configurando CORS
+2025-09-26 20:01:42,800 - main - INFO - Registrando routers
+2025-09-26 20:01:42,811 - main - INFO - Montando archivos estáticos
+2025-09-26 20:02:32,574 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:02:32,575 - main - INFO - Configurando CORS
+2025-09-26 20:02:32,576 - main - INFO - Registrando routers
+2025-09-26 20:02:32,587 - main - INFO - Montando archivos estáticos
+2025-09-26 20:02:42,064 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:02:42,065 - main - INFO - Configurando CORS
+2025-09-26 20:02:42,065 - main - INFO - Registrando routers
+2025-09-26 20:02:42,076 - main - INFO - Montando archivos estáticos
+2025-09-26 20:03:05,580 - main - INFO - Creando aplicación FastAPI
+2025-09-26 20:03:05,581 - main - INFO - Configurando CORS
+2025-09-26 20:03:05,582 - main - INFO - Registrando routers
+2025-09-26 20:03:05,593 - main - INFO - Montando archivos estáticos
+2025-09-26 20:03:05,715 - utils.MDleer_json - WARNING - Archivo c:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:03:05,829 - utils.MDleer_json - ERROR - Error al decodificar JSON en {DATA_JSON}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-09-26 20:08:23,828 - __main__ - INFO - Creando aplicación FastAPI
+2025-09-26 20:08:23,832 - __main__ - INFO - Configurando CORS
+2025-09-26 20:08:23,833 - __main__ - INFO - Registrando routers
+2025-09-26 20:08:23,865 - __main__ - INFO - Montando archivos estáticos
+2025-09-26 20:08:24,337 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-09-26 20:08:29,220 - routers.OTHERS - INFO - Acceso al endpoint raíz
+2025-09-26 20:08:33,194 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:08:33,196 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:08:33,197 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-09-26 20:08:36,929 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 20:08:36,931 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:08:36,933 - routers.GET - INFO - Tarea 1 no encontrada en activas, buscando en eliminadas
+2025-09-26 20:08:36,934 - utils.MDleer_eliminadas_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 20:08:36,935 - routers.GET - WARNING - Tarea 1 no encontrada en ningún archivo
+2025-09-26 20:08:39,489 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:08:39,490 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:08:39,491 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-09-26 20:08:54,335 - routers.OTHERS - INFO - Solicitud para servir el frontend
+2025-09-26 20:08:55,396 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:08:55,397 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:08:55,397 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-09-26 20:09:08,247 - routers.POST - INFO - Solicitud para crear tarea: Aprender ingles
+2025-09-26 20:09:08,247 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:09:08,249 - utils.MDleer_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas.json no existe, retornando lista vacía
+2025-09-26 20:09:08,250 - utils.MDleer_eliminadas_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 20:09:08,250 - routers.POST - INFO - ID asignado: 1
+2025-09-26 20:09:08,252 - routers.POST - INFO - Tarea creada exitosamente con ID: 1
+2025-09-26 20:09:08,277 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:09:08,294 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-09-26 20:09:24,539 - routers.POST - INFO - Solicitud para crear tarea: Comer
+2025-09-26 20:09:24,541 - utils.MDleer_eliminadas_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 20:09:24,542 - routers.POST - INFO - ID asignado: 2
+2025-09-26 20:09:24,543 - routers.POST - INFO - Tarea creada exitosamente con ID: 2
+2025-09-26 20:09:24,566 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:09:24,581 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-09-26 20:09:31,893 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 2
+2025-09-26 20:09:31,894 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 2
+2025-09-26 20:09:31,895 - utils.MDleer_eliminadas_json - WARNING - Archivo C:\Users\julia_xxpoq4c\OneDrive - Secretaria de Educacion del Distrito\Mi PC\Escritorio\Proyectos\API\constants\../data\tareas_eliminadas.json no existe, retornando lista vacía
+2025-09-26 20:09:31,898 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-09-26 20:09:31,902 - routers.DELETE - INFO - Tarea 2 eliminada exitosamente
+2025-09-26 20:09:31,924 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:09:31,927 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-09-26 20:09:37,457 - routers.PATCH - INFO - Solicitud para actualizar tarea parcial con ID: 1
+2025-09-26 20:09:37,460 - routers.PATCH - INFO - Tarea 1 actualizada parcialmente
+2025-09-26 20:09:37,480 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:09:37,494 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-09-26 20:09:47,643 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-09-26 20:09:47,645 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-09-26 20:09:53,214 - routers.GET - INFO - Solicitud para obtener tarea con ID: 1
+2025-09-26 20:09:53,215 - routers.GET - INFO - Tarea 1 encontrada en tareas activas
+2025-09-26 20:09:59,974 - routers.GET - INFO - Solicitud para obtener tarea con ID: 3
+2025-09-26 20:09:59,975 - routers.GET - INFO - Tarea 3 no encontrada en activas, buscando en eliminadas
+2025-09-26 20:09:59,976 - routers.GET - WARNING - Tarea 3 no encontrada en ningún archivo

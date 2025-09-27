@@ -1,30 +1,9 @@
 [
   {
     "id": 2,
-    "titulo": "Tarea eliminada",
-    "descripcion": "Esta se eliminó",
+    "titulo": "Comer",
+    "descripcion": "Falta mucho por completar esta",
     "completada": false,
-    "fecha_eliminacion": "2025-09-20T15:30:45.123456"
-  },
-  {
-    "id": 5,
-    "titulo": "Ser feliz",
-    "descripcion": "Comer mucho",
-    "completada": true,
-    "fecha_eliminacion": "2025-09-21T15:52:07.600107"
-  },
-  {
-    "id": 6,
-    "titulo": "Dibujar",
-    "descripcion": "Soy muy malo",
-    "completada": false,
-    "fecha_eliminacion": "2025-09-21T16:10:35.456455"
-  },
-  {
-    "id": 7,
-    "titulo": "asdasd",
-    "descripcion": "addsad",
-    "completada": true,
-    "fecha_eliminacion": "2025-09-21T19:54:05.734455"
+    "fecha_eliminacion": "2025-09-26T20:09:31.896095"
   }
 ]

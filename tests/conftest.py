@@ -12,18 +12,31 @@ print(f"Current working directory: {os.getcwd()}")
 print(f"Python path includes: {[p for p in sys.path if 'API' in p or p == '.']}")
 
 try:
+    # Try absolute import first
     from main import app
 
-    print("Absolute import 'from main import app' succeeded")
+    print("Absolute import 'from API.main import app' succeeded")
 except ImportError as e:
     print(f"Absolute import failed: {e}")
     try:
-        from ..main import app
+        # Try relative import for when running from project root
+        from main import app
 
-        print("Relative import 'from ..main import app' succeeded")
+        print("Relative import 'from ..API.main import app' succeeded")
     except ImportError as e2:
         print(f"Relative import failed: {e2}")
-        raise  # Re-raise to fail the import
+        try:
+            # Add parent directory to path if needed
+            parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            if parent_dir not in sys.path:
+                sys.path.insert(0, parent_dir)
+
+            from main import app
+
+            print("Fallback import with path manipulation succeeded")
+        except ImportError as e3:
+            print(f"Fallback import failed: {e3}")
+            raise  # Re-raise to fail the import
 
 
 @pytest.fixture
