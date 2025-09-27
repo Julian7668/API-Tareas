@@ -8,15 +8,15 @@ Este directorio contiene la suite de tests para la API de tareas, organizada en 
 tests/
 ├── conftest.py              # Configuración y fixtures globales
 ├── README.md               # Esta documentación
-├── test_routers/           # Tests organizados por router HTTP
+├── tests_routers/          # Tests organizados por router HTTP
 │   ├── testGET.py          # Tests para operaciones GET
 │   ├── testPOST.py         # Tests para operaciones POST
 │   ├── testPUT.py          # Tests para operaciones PUT
 │   ├── testPATCH.py        # Tests para operaciones PATCH
 │   ├── testDELETE.py       # Tests para operaciones DELETE
 │   └── testOTHERS.py       # Tests para rutas misceláneas
-└── test_utils/             # Tests organizados por función utility
-    ├── TESTleer_json.py       # Tests para leer_json()
+└── tests_utils/             # Tests organizados por función utility
+    ├── TESTleer_json.py      # Tests para leer_json()
     ├── TESTobtener_proximo_id.py  # Tests para obtener_proximo_id()
     ├── TESTguardar_eliminada.py   # Tests para guardar_eliminada()
     ├── TESTleer_eliminadas_json.py # Tests para leer_eliminadas_json()
@@ -26,10 +26,13 @@ tests/
 ## Características
 
 ### Módulos Individuales
+
 Cada módulo contiene funciones de test independientes con nombres descriptivos en snake_case.
 
 ### Fixtures Reutilizables
+
 Los fixtures definidos en `conftest.py` están disponibles para todos los módulos:
+
 - `client`: Cliente de test para la API FastAPI
 - `sample_tasks`: Datos de tareas de ejemplo
 - `sample_deleted_tasks`: Datos de tareas eliminadas de ejemplo
@@ -61,7 +64,7 @@ pytest tests/test_routers/testGET.py::test_obtener_tareas
 3. **Ejecución granular**: Puedes ejecutar tests específicos
 4. **Reutilización**: Los fixtures son compartidos entre módulos
 5. **Escalabilidad**: Fácil agregar nuevos módulos de test
-6. **Simplicidad**: Sin código innecesario (if __name__, __init__.py)
+6. **Simplicidad**: Sin código innecesario (if **name**, **init**.py)
 
 ## Agregar nuevos tests
 
