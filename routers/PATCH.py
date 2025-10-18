@@ -1,3 +1,10 @@
+"""
+Router para operaciones PATCH
+
+Este módulo contiene las rutas para actualizar parcialmente tareas existentes.
+Permite modificar solo los campos especificados sin afectar los demás.
+"""
+
 import logging
 from fastapi import HTTPException, APIRouter
 
@@ -17,7 +24,19 @@ logger = logging.getLogger(__name__)
     "Los campos no proporcionados mantienen su valor actual.",
 )
 def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
-    """Actualiza parcialmente una tarea existente"""
+    """
+    Actualiza parcialmente una tarea existente.
+
+    Args:
+        tarea_id (int): ID de la tarea a actualizar.
+        tarea_update (TareaUpdate): Campos a actualizar (solo los proporcionados se modifican).
+
+    Returns:
+        Tarea: La tarea actualizada con todos sus campos.
+
+    Raises:
+        HTTPException: Si la tarea no se encuentra (404).
+    """
     logger.info("Solicitud para actualizar tarea parcial con ID: %s", tarea_id)
     datos = leer_json()
 

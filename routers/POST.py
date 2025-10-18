@@ -1,3 +1,10 @@
+"""
+Router para operaciones POST
+
+Este módulo contiene las rutas para crear nuevas tareas en el sistema.
+Asigna automáticamente IDs únicos a las nuevas tareas.
+"""
+
 import logging
 from fastapi import APIRouter
 
@@ -49,7 +56,15 @@ logger = logging.getLogger(__name__)
     },
 )
 def crear_tarea(tarea: Tarea):
-    """Crea una nueva tarea"""
+    """
+    Crea una nueva tarea en el sistema.
+
+    Args:
+        tarea (Tarea): Los datos de la nueva tarea (sin ID, se asigna automáticamente).
+
+    Returns:
+        Tarea: La tarea creada con su ID asignado.
+    """
     logger.info("Solicitud para crear tarea: %s", tarea.titulo)
     datos = leer_json()
 

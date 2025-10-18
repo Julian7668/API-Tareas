@@ -1,3 +1,10 @@
+"""
+Router para operaciones PUT
+
+Este módulo contiene las rutas para actualizar completamente tareas existentes.
+Reemplaza todos los campos de la tarea con los nuevos valores proporcionados.
+"""
+
 import logging
 from fastapi import HTTPException, APIRouter
 
@@ -17,7 +24,19 @@ logger = logging.getLogger(__name__)
     "Todos los campos deben ser proporcionados.",
 )
 def actualizar_tarea_completa(tarea_id: int, tarea: Tarea):
-    """Actualiza completamente una tarea existente"""
+    """
+    Actualiza completamente una tarea existente.
+
+    Args:
+        tarea_id (int): ID de la tarea a actualizar.
+        tarea (Tarea): Los nuevos datos completos de la tarea.
+
+    Returns:
+        Tarea: La tarea actualizada con todos sus campos.
+
+    Raises:
+        HTTPException: Si la tarea no se encuentra (404).
+    """
     logger.info("Solicitud para actualizar tarea completa con ID: %s", tarea_id)
     datos = leer_json()
 

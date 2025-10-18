@@ -1,3 +1,10 @@
+"""
+Router para operaciones GET
+
+Este módulo contiene las rutas para obtener tareas del sistema.
+Permite obtener todas las tareas o una tarea específica por ID.
+"""
+
 import logging
 from fastapi import HTTPException, APIRouter, Path
 
@@ -17,7 +24,12 @@ logger = logging.getLogger(__name__)
     "Las tareas se devuelven en el orden en que están almacenadas.",
 )
 def obtener_tareas():
-    """Obtiene todas las tareas almacenadas"""
+    """
+    Obtiene todas las tareas activas almacenadas en el sistema.
+
+    Returns:
+        list[Tarea]: Lista de todas las tareas activas.
+    """
     logger.info("Solicitud para obtener todas las tareas")
     tareas = leer_json()
     logger.info("Tareas cargadas: %s items", len(tareas))
@@ -67,7 +79,18 @@ def obtener_tareas():
 def obtener_tarea(
     tarea_id: int = Path(..., description="ID único de la tarea a buscar", ge=1)
 ):
-    """Obtiene una tarea específica por su ID"""
+    """
+    Obtiene una tarea específica por su ID.
+
+    Args:
+        tarea_id (int): ID único de la tarea a buscar (debe ser >= 1).
+
+    Returns:
+        Tarea: Los detalles de la tarea encontrada.
+
+    Raises:
+        HTTPException: 404 si la tarea no existe, 410 si fue eliminada.
+    """
     logger.info("Solicitud para obtener tarea con ID: %s", tarea_id)
     datos = leer_json()
 

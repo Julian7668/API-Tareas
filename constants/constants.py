@@ -1,3 +1,10 @@
+"""
+Constantes del proyecto
+
+Este módulo define las rutas y constantes utilizadas en toda la aplicación,
+incluyendo las ubicaciones de archivos de datos y configuración de directorios.
+"""
+
 import os
 
 # Archivos JSON donde guardaremos los datos

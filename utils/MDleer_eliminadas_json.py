@@ -1,3 +1,10 @@
+"""
+Módulo para leer tareas eliminadas desde archivos JSON
+
+Este módulo proporciona funciones para cargar tareas eliminadas
+desde archivos JSON con manejo robusto de errores.
+"""
+
 import os
 from typing import Any
 import json
@@ -9,6 +16,12 @@ logger = logging.getLogger(__name__)
 
 # Función para leer tareas eliminadas
 def leer_eliminadas_json() -> list[dict[str, Any]]:
+    """
+    Lee las tareas eliminadas desde el archivo JSON.
+
+    Returns:
+        list[dict[str, Any]]: Lista de tareas eliminadas. Retorna lista vacía si el archivo no existe o hay error.
+    """
     logger.debug("Leyendo archivo JSON de eliminadas: %s", DELETED_JSON)
     if not os.path.exists(DELETED_JSON):
         logger.warning("Archivo %s no existe, retornando lista vacía", DELETED_JSON)

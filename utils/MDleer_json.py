@@ -1,3 +1,10 @@
+"""
+Módulo para leer datos desde archivos JSON
+
+Este módulo proporciona funciones para cargar datos desde archivos JSON
+con manejo robusto de errores y archivos inexistentes.
+"""
+
 import os
 import json
 import logging
@@ -9,6 +16,12 @@ logger = logging.getLogger(__name__)
 
 # Función para leer datos del archivo JSON
 def leer_json() -> list[dict[str, Any]]:
+    """
+    Lee los datos desde el archivo JSON principal.
+
+    Returns:
+        list[dict[str, Any]]: Lista de datos leídos. Retorna lista vacía si el archivo no existe o hay error.
+    """
     logger.debug("Leyendo archivo JSON: %s", DATA_JSON)
     if not os.path.exists(DATA_JSON):
         logger.warning("Archivo %s no existe, retornando lista vacía", DATA_JSON)

@@ -1,3 +1,10 @@
+"""
+API de Tareas
+
+Esta es la aplicación principal de FastAPI para gestionar tareas.
+Incluye configuración de logging, CORS, routers y archivos estáticos.
+"""
+
 import os
 import logging
 from fastapi import FastAPI
@@ -12,7 +19,7 @@ os.makedirs(log_dir, exist_ok=True)
 
 # Configurar logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(os.path.join(log_dir, "app.log")),

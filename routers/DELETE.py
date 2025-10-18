@@ -1,3 +1,10 @@
+"""
+Router para operaciones DELETE
+
+Este módulo contiene las rutas para eliminar tareas del sistema.
+Las tareas eliminadas se mueven a un historial para auditoría.
+"""
+
 import logging
 from typing import Any
 from fastapi import APIRouter, HTTPException
@@ -16,7 +23,18 @@ logger = logging.getLogger(__name__)
     "con marca de tiempo para auditoría.",
 )
 def eliminar_tarea(tarea_id: int) -> dict[str, Any]:
-    """Elimina una tarea específica"""
+    """
+    Elimina una tarea específica del sistema.
+
+    Args:
+        tarea_id (int): ID de la tarea a eliminar.
+
+    Returns:
+        dict[str, Any]: Diccionario con mensaje de confirmación y datos de la tarea eliminada.
+
+    Raises:
+        HTTPException: Si la tarea no se encuentra (404).
+    """
     logger.info("Solicitud para eliminar tarea con ID: %s", tarea_id)
     datos = leer_json()
 
