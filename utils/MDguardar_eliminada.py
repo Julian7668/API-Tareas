@@ -7,10 +7,9 @@ con marca de tiempo para auditoría y recuperación histórica.
 
 from datetime import datetime
 from typing import Any
-import json
 import logging
 
-from constants import DELETED_JSON
+from utils import leer_eliminadas_json, escribir_datos
 
 logger = logging.getLogger(__name__)
 
@@ -33,8 +32,10 @@ def guardar_eliminada(tarea: dict[str, Any]) -> None:
     tarea_eliminada["fecha_eliminacion"] = datetime.now().isoformat()
 
     try:
-        with open(DELETED_JSON, "w", encoding="utf-8") as file:
-            json.dump([tarea_eliminada], file, indent=2, ensure_ascii=False)
+        data = leer_eliminadas_json()
+        data.append(tarea_eliminada)
+
+        escribir_datos(data)
         logger.info("Tarea eliminada guardada exitosamente")
     except Exception as e:
         logger.error("Error al guardar tarea eliminada: %s", e)
