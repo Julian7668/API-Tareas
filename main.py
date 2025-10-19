@@ -50,7 +50,7 @@ app.include_router(GET.router, tags=["📖 Obtener"])
 app.include_router(POST.router, tags=["➕ Crear"])
 app.include_router(PUT.router, prefix="/tareas", tags=["📝 Actualizar"])
 app.include_router(PATCH.router, prefix="/tareas", tags=["⚡ Parcial"])
-app.include_router(DELETE.router, prefix="/tareas", tags=["🗑️ Eliminar"])
+app.include_router(DELETE.router, tags=["🗑️ Eliminar"])
 app.include_router(OTHERS.router, tags=["🌟 General"])
 
 # Static files

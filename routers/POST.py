@@ -9,7 +9,12 @@ import logging
 from fastapi import APIRouter, HTTPException
 
 from constants import Tarea
-from utils import leer_json, obtener_proximo_id, escribir_datos, leer_eliminadas_json
+from utils import (
+    leer_json,
+    obtener_proximo_id,
+    escribir_datos_tareas,
+    leer_eliminadas_json,
+)
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -75,7 +80,7 @@ def crear_tarea(tarea: Tarea):
 
     # Agregar la nueva tarea a los datos
     datos.append(nueva_tarea)
-    escribir_datos(datos)
+    escribir_datos_tareas(datos)
     logger.info("Tarea creada exitosamente con ID: %s", nueva_tarea["id"])
     logger.debug("Retornando nueva_tarea: %s", nueva_tarea)
     return nueva_tarea
@@ -158,7 +163,7 @@ def restaurar_tarea(tarea_id: int):
     datos.insert(posicion, tarea_restaurada)
 
     # Guardar cambios
-    escribir_datos(datos)
+    escribir_datos_tareas(datos)
     # Actualizar archivo de eliminadas (sin la tarea restaurada)
     import json
     from constants import DELETED_JSON

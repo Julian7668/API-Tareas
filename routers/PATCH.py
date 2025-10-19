@@ -9,7 +9,7 @@ import logging
 from fastapi import HTTPException, APIRouter
 
 from constants import Tarea, TareaUpdate
-from utils import leer_json, escribir_datos
+from utils import leer_json, escribir_datos_tareas
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -50,7 +50,7 @@ def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
             if tarea_update.completada is not None:
                 datos[i]["completada"] = tarea_update.completada
 
-            escribir_datos(datos)
+            escribir_datos_tareas(datos)
             logger.info("Tarea %s actualizada parcialmente", tarea_id)
             return datos[i]
 

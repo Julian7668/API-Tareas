@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": 1,
+    "titulo": "Completar curso de Git en HolaMundo",
+    "descripcion": "Terminar todos los módulos del curso de Git y control de versiones en la academia HolaMundo, incluyendo los ejercicios prácticos de branches y merge",
+    "completada": false
+  },
+  {
+    "id": 2,
+    "titulo": "Practicar ejercicios de lógica proposicional",
+    "descripcion": "Resolver al menos 15 ejercicios de tablas de verdad y equivalencias lógicas para fortalecer el pensamiento algorítmico",
+    "completada": true
+  },
+  {
+    "id": 3,
+    "titulo": "Estudiar JavaScript básico para backend",
+    "descripcion": "Aprender los fundamentos de JavaScript necesarios para trabajar con Node.js, incluyendo promesas, async/await y manejo de eventos",
+    "completada": false
+  },
+  {
+    "id": 4,
+    "titulo": "Crear diagrama de flujo para sistema de autenticación",
+    "descripcion": "Diseñar un DFD completo que muestre el flujo de un sistema de login con validación de usuarios y manejo de sesiones",
+    "completada": false
+  },
+  {
+    "id": 5,
+    "titulo": "Resolver 5 problemas de ajedrez tácticos",
+    "descripcion": "Practicar tácticas de ajedrez enfocándose en patrones de mate en 2 y 3 movimientos para mejorar el cálculo y la visualización",
+    "completada": true
+  },
+  {
+    "id": 6,
+    "titulo": "Optimizar código de la API de tareas",
+    "descripcion": "Revisar el código actual de la API FastAPI y refactorizar las funciones que se puedan mejorar en términos de eficiencia y legibilidad",
+    "completada": false
+  },
+  {
+    "id": 7,
+    "titulo": "Documentar proyecto actual en GitHub",
+    "descripcion": "Actualizar el README con ejemplos detallados de uso, capturas de pantalla y una sección de troubleshooting para futuros colaboradores",
+    "completada": false
+  },
+  {
+    "id": 8,
+    "titulo": "Implementar validaciones adicionales en modelos Pydantic",
+    "descripcion": "Agregar validators personalizados para asegurar la calidad de los datos que entran a la API, especialmente en títulos y descripciones",
+    "completada": false
+  },
+  {
+    "id": 9,
+    "titulo": "Estudiar cada capítulo sobre bases de datos en el curso de backend",
+    "descripcion": "Completar la sección de SQL y bases de datos relacionales, tomando notas sobre las mejores prácticas de normalización",
+    "completada": true
+  },
+  {
+    "id": 10,
+    "titulo": "Configurar entorno de desarrollo en Linux",
+    "descripcion": "Preparar una máquina virtual con Linux para empezar a familiarizarse con el sistema operativo y configurar todas las herramientas de desarrollo necesarias",
+    "completada": false
+  }
+]

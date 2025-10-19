@@ -8,13 +8,13 @@ en archivos JSON con formato legible y manejo de errores.
 from typing import Any
 import json
 import logging
-from constants import DATA_JSON
+from constants import DELETED_JSON
 
 logger = logging.getLogger(__name__)
 
 
 # Función para escribir datos al archivo JSON
-def escribir_datos(datos: list[dict[str, Any]]) -> None:
+def escribir_datos_eliminadas(datos: list[dict[str, Any]]) -> None:
     """
     Escribe una lista de datos en el archivo JSON especificado.
 
@@ -24,11 +24,11 @@ def escribir_datos(datos: list[dict[str, Any]]) -> None:
     Raises:
         Exception: Si ocurre un error durante la escritura del archivo.
     """
-    logger.debug("Escribiendo {len(datos)} elementos al archivo JSON: %s", DATA_JSON)
+    logger.debug("Escribiendo {len(datos)} elementos al archivo JSON: %s", DELETED_JSON)
     try:
-        with open(DATA_JSON, "w", encoding="utf-8") as file:
+        with open(DELETED_JSON, "w", encoding="utf-8") as file:
             json.dump(datos, file, indent=2, ensure_ascii=False)
         logger.debug("Datos escritos exitosamente")
     except Exception as e:
-        logger.error("Error al escribir datos en {DATA_JSON}: %s", e)
+        logger.error("Error al escribir datos en {DELETED_JSON}: %s", e)
         raise

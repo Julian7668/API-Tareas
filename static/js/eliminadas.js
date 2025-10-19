@@ -74,6 +74,9 @@ function mostrarTareasEliminadas(tareas) {
     <button class="btn btn-success" onclick="restaurarTarea(${tarea.id})">
       🔄 Restaurar
     </button>
+    <button class="btn btn-info" onclick="eliminarCompletamente(${tarea.id})">
+      🗑️ Eliminar Completamente
+    </button>
   </div>
 </div>
 `;
@@ -104,6 +107,28 @@ async function restaurarTarea(id) {
   } catch (error) {
     console.error("Error:", error);
     mostrarMensaje("Error al restaurar la tarea", "error");
+  }
+}
+async function eliminarCompletamente(id) {
+  if (!confirm("¿Estás seguro de que quieres eliminar completamente esta tarea?")) {
+    return;
+  }
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/eliminadas/${id}!`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Error al eliminar la tarea");
+    }
+
+    const tareaEliminadaCompletamente = await response.json();
+    mostrarMensaje(`Tarea "${tareaEliminadaCompletamente.tarea.titulo}" eliminada completamente!`);
+    cargarTareasEliminadas();
+  } catch (error) {
+    console.error("Error:", error);
+    mostrarMensaje("Error al eliminar la tarea", "error");
   }
 }
 

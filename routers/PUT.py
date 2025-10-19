@@ -9,7 +9,7 @@ import logging
 from fastapi import HTTPException, APIRouter
 
 from constants import Tarea
-from utils import leer_json, escribir_datos
+from utils import leer_json, escribir_datos_tareas
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -46,7 +46,7 @@ def actualizar_tarea_completa(tarea_id: int, tarea: Tarea):
             tarea_actualizada = tarea.model_dump()
             tarea_actualizada["id"] = tarea_id
             datos[i] = tarea_actualizada
-            escribir_datos(datos)
+            escribir_datos_tareas(datos)
             logger.info("Tarea %s actualizada completamente", tarea_id)
             return tarea_actualizada
 
