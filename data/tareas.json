@@ -1,12 +1,12 @@
 [
   {
-    "id": 2,
+    "id": 1,
     "titulo": "Ser feliz",
     "descripcion": "Sonreir mucho",
     "completada": true
   },
   {
-    "id": 3,
+    "id": 2,
     "titulo": "Aprender ingles",
     "descripcion": "Entender el idioma",
     "completada": false

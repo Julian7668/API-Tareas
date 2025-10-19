@@ -90,7 +90,7 @@ async function restaurarTarea(id) {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/tareas/restaurar/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/eliminadas/${id}`, {
       method: "POST",
     });
 

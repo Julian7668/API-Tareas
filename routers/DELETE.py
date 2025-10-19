@@ -9,6 +9,11 @@ import logging
 from typing import Any
 from fastapi import APIRouter, HTTPException
 
+# import sys
+# import os
+
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+
 from utils import leer_json, guardar_eliminada, escribir_datos
 
 router = APIRouter()
@@ -53,3 +58,7 @@ def eliminar_tarea(tarea_id: int) -> dict[str, Any]:
 
     logger.warning("Tarea %s no encontrada para eliminación", tarea_id)
     raise HTTPException(status_code=404, detail="Tarea no encontrada")
+
+
+if __name__ == "__main__":
+    eliminar_tarea(1)  # Ejemplo de llamada para pruebas

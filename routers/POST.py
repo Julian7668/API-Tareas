@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 # POST - Crear una nueva tarea
 @router.post(
-    "",
+    "/tareas",
     response_model=Tarea,
     summary="Crear nueva tarea",
     description="Crea una nueva tarea en el sistema. El ID se asigna automáticamente. "
@@ -83,7 +83,7 @@ def crear_tarea(tarea: Tarea):
 
 # POST - Restaurar una tarea eliminada
 @router.post(
-    "/restaurar/{tarea_id}",
+    "/eliminadas/{tarea_id}",
     response_model=Tarea,
     summary="Restaurar tarea eliminada",
     description="Restaura una tarea previamente eliminada, moviéndola de vuelta a las tareas activas.",
@@ -142,11 +142,20 @@ def restaurar_tarea(tarea_id: int):
         logger.warning("Tarea %s no encontrada en eliminadas", tarea_id)
         raise HTTPException(status_code=404, detail="Tarea no encontrada en eliminadas")
 
-    # Remover la fecha de eliminación y agregar a tareas activas
+    # Remover la fecha de eliminación
     tarea_restaurada = {
         k: v for k, v in tarea_a_restaurar.items() if k != "fecha_eliminacion"
     }
-    datos.append(tarea_restaurada)
+
+    # Insertar la tarea en la posición correcta para mantener el orden por ID
+    id_restaurado = tarea_restaurada["id"]
+    for i, tarea in enumerate(datos):
+        if tarea["id"] > id_restaurado:
+            posicion = i
+            break
+    else:
+        posicion = len(datos)
+    datos.insert(posicion, tarea_restaurada)
 
     # Guardar cambios
     escribir_datos(datos)

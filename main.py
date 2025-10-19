@@ -46,8 +46,8 @@ app.add_middleware(
 
 # REGISTRAR TODOS LOS ROUTERS
 logger.info("Registrando routers")
-app.include_router(GET.router, prefix="", tags=["📖 Obtener"])
-app.include_router(POST.router, prefix="/tareas", tags=["➕ Crear"])
+app.include_router(GET.router, tags=["📖 Obtener"])
+app.include_router(POST.router, tags=["➕ Crear"])
 app.include_router(PUT.router, prefix="/tareas", tags=["📝 Actualizar"])
 app.include_router(PATCH.router, prefix="/tareas", tags=["⚡ Parcial"])
 app.include_router(DELETE.router, prefix="/tareas", tags=["🗑️ Eliminar"])
