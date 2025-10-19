@@ -19,9 +19,9 @@ function mostrarMensaje(mensaje, tipo = "success") {
 // Función para cargar todas las tareas eliminadas
 async function cargarTareasEliminadas() {
   console.log("Iniciando carga de tareas eliminadas...");
-  console.log("URL de la API:", `${API_BASE_URL}/eliminadas-json`);
+  console.log("URL de la API:", `${API_BASE_URL}/eliminadas`);
   try {
-    const response = await fetch(`${API_BASE_URL}/eliminadas-json`);
+    const response = await fetch(`${API_BASE_URL}/eliminadas`);
     console.log("Respuesta del fetch - Status:", response.status, "OK:", response.ok);
     if (!response.ok) {
       console.error("Respuesta no OK. Status:", response.status, "StatusText:", response.statusText);

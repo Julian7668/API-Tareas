@@ -1,6 +1,8 @@
 // URL base de la API
 const API_BASE_URL = "http://localhost:8000";
 
+console.log("Script app.js cargado correctamente");
+
 // Variables globales
 let editandoTarea = false;
 let tareaEditandoId = null;
@@ -229,7 +231,8 @@ function limpiarFormulario() {
 
 // Función para ir a la vista de tareas eliminadas
 function irAVistaEliminadas() {
-  window.location.href = "/eliminadas";
+  console.log("Función irAVistaEliminadas llamada");
+  window.location.href = "/static/eliminadas.html";
 }
 
 // Manejar el envío del formulario

@@ -334,3 +334,228 @@
 2025-10-18 21:40:54,563 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
 2025-10-18 21:40:57,427 - routers.GET - INFO - Solicitud para obtener todas las tareas
 2025-10-18 21:40:57,431 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-10-18 21:43:39,033 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 21:43:39,036 - __main__ - INFO - Configurando CORS
+2025-10-18 21:43:39,037 - __main__ - INFO - Registrando routers
+2025-10-18 21:43:39,072 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 21:43:39,229 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 21:43:44,613 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:43:44,615 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-10-18 21:45:17,916 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 21:45:18,763 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:45:18,764 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-10-18 21:49:44,793 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 21:49:44,798 - __main__ - INFO - Configurando CORS
+2025-10-18 21:49:44,799 - __main__ - INFO - Registrando routers
+2025-10-18 21:49:44,842 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 21:49:45,023 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 21:49:56,665 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:49:56,668 - routers.GET - INFO - Tareas cargadas: 0 items
+2025-10-18 21:50:37,588 - routers.POST - INFO - Solicitud para crear tarea: Ser feliz
+2025-10-18 21:50:37,591 - routers.POST - INFO - ID asignado: 2
+2025-10-18 21:50:37,592 - routers.POST - INFO - Tarea creada exitosamente con ID: 2
+2025-10-18 21:50:56,876 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:50:56,879 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-10-18 21:56:55,686 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 21:56:55,689 - __main__ - INFO - Configurando CORS
+2025-10-18 21:56:55,690 - __main__ - INFO - Registrando routers
+2025-10-18 21:56:55,733 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 21:56:55,891 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 21:57:00,920 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 21:57:01,817 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:57:01,820 - routers.GET - INFO - Tareas cargadas: 1 items
+2025-10-18 21:57:22,738 - routers.POST - INFO - Solicitud para crear tarea: Aprender ingles
+2025-10-18 21:57:22,741 - routers.POST - INFO - ID asignado: 3
+2025-10-18 21:57:22,743 - routers.POST - INFO - Tarea creada exitosamente con ID: 3
+2025-10-18 21:57:22,765 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 21:57:22,784 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 21:58:22,698 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 21:58:22,703 - __main__ - INFO - Configurando CORS
+2025-10-18 21:58:22,703 - __main__ - INFO - Registrando routers
+2025-10-18 21:58:22,740 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 21:58:22,896 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:00:16,125 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:00:16,129 - __main__ - INFO - Configurando CORS
+2025-10-18 22:00:16,129 - __main__ - INFO - Registrando routers
+2025-10-18 22:00:16,165 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:00:16,331 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:00:18,545 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:00:18,548 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:01:04,871 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:01:04,876 - __main__ - INFO - Configurando CORS
+2025-10-18 22:01:04,876 - __main__ - INFO - Registrando routers
+2025-10-18 22:01:04,898 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:01:05,012 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:01:17,795 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:01:17,796 - __main__ - INFO - Configurando CORS
+2025-10-18 22:01:17,796 - __main__ - INFO - Registrando routers
+2025-10-18 22:01:17,828 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:01:17,970 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:02:20,639 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:02:20,644 - __main__ - INFO - Configurando CORS
+2025-10-18 22:02:20,645 - __main__ - INFO - Registrando routers
+2025-10-18 22:02:20,692 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:02:20,847 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:03:38,196 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:03:38,199 - __main__ - INFO - Configurando CORS
+2025-10-18 22:03:38,200 - __main__ - INFO - Registrando routers
+2025-10-18 22:03:38,246 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:03:38,398 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:03:38,994 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:03:38,995 - __main__ - INFO - Configurando CORS
+2025-10-18 22:03:38,995 - __main__ - INFO - Registrando routers
+2025-10-18 22:03:39,009 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:03:39,112 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:03:54,293 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:03:54,293 - __main__ - INFO - Configurando CORS
+2025-10-18 22:03:54,294 - __main__ - INFO - Registrando routers
+2025-10-18 22:03:54,308 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:03:54,423 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:04:21,334 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:04:22,244 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:04:22,245 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:04:32,136 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:04:32,573 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:04:32,575 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:04:33,545 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:04:33,896 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:04:33,896 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:04:34,838 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:04:35,190 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:04:35,191 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:04:36,018 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:04:36,330 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:04:36,330 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:04:45,568 - routers.OTHERS - INFO - Solicitud para servir página de eliminadas
+2025-10-18 22:04:46,273 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:04:46,274 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:03,619 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:05:03,620 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:05:23,620 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:23,621 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:32,330 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:32,331 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:33,661 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:33,663 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:34,274 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:34,274 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:34,718 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:34,718 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:34,966 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:34,966 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:35,205 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:35,207 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:35,447 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:35,448 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:35,652 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:35,652 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:35,911 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:35,912 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:36,133 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:36,134 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:36,389 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:36,391 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:36,637 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-18 22:05:36,638 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-18 22:05:37,631 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:05:37,632 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:05:56,835 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:05:56,839 - __main__ - INFO - Configurando CORS
+2025-10-18 22:05:56,839 - __main__ - INFO - Registrando routers
+2025-10-18 22:05:56,875 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:05:57,033 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:06:12,294 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:06:13,010 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:06:13,011 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:06:14,436 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-18 22:06:14,440 - __main__ - INFO - Configurando CORS
+2025-10-18 22:06:14,441 - __main__ - INFO - Registrando routers
+2025-10-18 22:06:14,481 - __main__ - INFO - Montando archivos estáticos
+2025-10-18 22:06:14,632 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-18 22:06:23,693 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:06:23,972 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:06:23,973 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:06:24,805 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:06:25,118 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:06:25,119 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:06:25,421 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:06:25,692 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:06:25,693 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:06:26,357 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:06:26,636 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:06:26,637 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:07:49,596 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:07:50,273 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:07:50,274 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:07:50,901 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-18 22:07:51,260 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:07:51,261 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-18 22:09:52,077 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-18 22:09:52,078 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:08:48,513 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 12:08:48,518 - __main__ - INFO - Configurando CORS
+2025-10-19 12:08:48,518 - __main__ - INFO - Registrando routers
+2025-10-19 12:08:48,554 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 12:08:50,031 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 12:09:10,493 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:09:13,329 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:09:13,345 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:12:46,392 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 12:12:46,395 - __main__ - INFO - Configurando CORS
+2025-10-19 12:12:46,396 - __main__ - INFO - Registrando routers
+2025-10-19 12:12:46,432 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 12:13:11,450 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 12:13:11,454 - __main__ - INFO - Configurando CORS
+2025-10-19 12:13:11,454 - __main__ - INFO - Registrando routers
+2025-10-19 12:13:11,491 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 12:13:12,343 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 12:13:16,881 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:13:22,692 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:24:44,624 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 12:24:44,628 - __main__ - INFO - Configurando CORS
+2025-10-19 12:24:44,628 - __main__ - INFO - Registrando routers
+2025-10-19 12:24:44,672 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 12:24:44,829 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 12:24:45,229 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:24:46,168 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:24:46,191 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:24:50,326 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:24:50,551 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:24:50,552 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:24:55,332 - routers.OTHERS - INFO - Solicitud para servir página de eliminadas
+2025-10-19 12:24:55,530 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:24:55,549 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:25:04,270 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:25:04,271 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:25:07,415 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:25:07,416 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:25:13,176 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:25:13,178 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:25:17,568 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:25:17,573 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:44:39,727 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 12:44:39,732 - __main__ - INFO - Configurando CORS
+2025-10-19 12:44:39,733 - __main__ - INFO - Registrando routers
+2025-10-19 12:44:39,770 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 12:44:39,939 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 12:44:49,736 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:44:49,738 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:44:52,516 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 12:44:52,882 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:44:52,884 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:44:59,328 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:44:59,329 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:45:05,640 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:45:05,642 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:45:07,094 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:45:07,096 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:45:08,292 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:45:08,293 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:45:10,276 - routers.GET - INFO - Solicitud para obtener todas las tareas
+2025-10-19 12:45:10,278 - routers.GET - INFO - Tareas cargadas: 2 items
+2025-10-19 12:45:12,615 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:45:12,618 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:45:20,580 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:45:20,582 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 12:45:22,476 - routers.GET - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 12:45:22,478 - routers.GET - INFO - Tareas eliminadas cargadas: 1 items

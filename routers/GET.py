@@ -120,7 +120,7 @@ def obtener_tarea(
 
 # GET - Obtener todas las tareas eliminadas
 @router.get(
-    "/eliminadas-json",
+    "/eliminadas",
     summary="Obtener tareas eliminadas",
     description="Retorna una lista con todas las tareas eliminadas del sistema, "
     "incluyendo la fecha de eliminación.",

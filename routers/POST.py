@@ -77,6 +77,8 @@ def crear_tarea(tarea: Tarea):
     datos.append(nueva_tarea)
     escribir_datos(datos)
     logger.info("Tarea creada exitosamente con ID: %s", nueva_tarea["id"])
+    logger.debug("Retornando nueva_tarea: %s", nueva_tarea)
+    return nueva_tarea
 
 
 # POST - Restaurar una tarea eliminada
