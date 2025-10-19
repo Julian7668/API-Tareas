@@ -25,3 +25,16 @@ def get_aplicacion():
     logger.info("Solicitud para servir la aplicación")
     static_path = os.path.join(os.path.dirname(__file__), "../static/index.html")
     return FileResponse(static_path)
+
+
+@router.get("/eliminadas")
+def get_eliminadas():
+    """
+    Sirve la página de tareas eliminadas.
+
+    Returns:
+        FileResponse: El archivo HTML de tareas eliminadas.
+    """
+    logger.info("Solicitud para servir página de eliminadas")
+    static_path = os.path.join(os.path.dirname(__file__), "../static/eliminadas.html")
+    return FileResponse(static_path)

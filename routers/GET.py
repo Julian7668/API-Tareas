@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 # GET - Obtener todas las tareas
 @router.get(
-    "",
+    "/tareas",
     response_model=list[Tarea],
     summary="Obtener todas las tareas",
     description="Retorna una lista con todas las tareas activas almacenadas en el sistema. "
@@ -38,7 +38,7 @@ def obtener_tareas():
 
 # GET - Obtener una tarea específica por ID
 @router.get(
-    "/{tarea_id}",
+    "/tareas/{tarea_id}",
     response_model=Tarea,
     summary="Obtener tarea por ID",
     description="Retorna los detalles de una tarea específica identificada por su ID único. "
@@ -116,3 +116,23 @@ def obtener_tarea(
     # Si no está en ningún lado, nunca existió
     logger.warning("Tarea %s no encontrada en ningún archivo", tarea_id)
     raise HTTPException(status_code=404, detail="Tarea no encontrada")
+
+
+# GET - Obtener todas las tareas eliminadas
+@router.get(
+    "/eliminadas-json",
+    summary="Obtener tareas eliminadas",
+    description="Retorna una lista con todas las tareas eliminadas del sistema, "
+    "incluyendo la fecha de eliminación.",
+)
+def obtener_tareas_eliminadas():
+    """
+    Obtiene todas las tareas eliminadas del sistema.
+
+    Returns:
+        list[dict]: Lista de tareas eliminadas con fecha de eliminación.
+    """
+    logger.info("Solicitud para obtener todas las tareas eliminadas")
+    tareas_eliminadas = leer_eliminadas_json()
+    logger.info("Tareas eliminadas cargadas: %s items", len(tareas_eliminadas))
+    return tareas_eliminadas

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Tareas Eliminadas - Gestor de Tareas</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🗂️ Tareas Eliminadas</h1>
+        <p>Historial de tareas eliminadas - Puedes restaurarlas si lo deseas</p>
+      </div>
+
+      <div class="content">
+        <!-- Controles -->
+        <div class="form-section">
+          <h2>🛠️ Controles</h2>
+          <button class="btn btn-success" onclick="cargarTareasEliminadas()">
+            🔄 Recargar Eliminadas
+          </button>
+          <button class="btn btn-primary" onclick="volverATareas()">
+            ← Volver a Tareas Activas
+          </button>
+        </div>
+
+        <!-- Área de mensajes -->
+        <div id="message-area"></div>
+
+        <!-- Lista de tareas eliminadas -->
+        <div class="tasks-section">
+          <h2>📋 Tareas Eliminadas</h2>
+          <div id="eliminadas-container">
+            <div class="loading">Cargando tareas eliminadas...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/eliminadas.js"></script>
+  </body>
+</html>

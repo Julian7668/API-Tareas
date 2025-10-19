@@ -19,7 +19,7 @@ os.makedirs(log_dir, exist_ok=True)
 
 # Configurar logging
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(os.path.join(log_dir, "app.log")),
@@ -46,7 +46,7 @@ app.add_middleware(
 
 # REGISTRAR TODOS LOS ROUTERS
 logger.info("Registrando routers")
-app.include_router(GET.router, prefix="/tareas", tags=["📖 Obtener"])
+app.include_router(GET.router, prefix="", tags=["📖 Obtener"])
 app.include_router(POST.router, prefix="/tareas", tags=["➕ Crear"])
 app.include_router(PUT.router, prefix="/tareas", tags=["📝 Actualizar"])
 app.include_router(PATCH.router, prefix="/tareas", tags=["⚡ Parcial"])

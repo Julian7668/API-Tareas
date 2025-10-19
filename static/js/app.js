@@ -227,6 +227,11 @@ function limpiarFormulario() {
   document.getElementById("cancel-btn").style.display = "none";
 }
 
+// Función para ir a la vista de tareas eliminadas
+function irAVistaEliminadas() {
+  window.location.href = "/eliminadas";
+}
+
 // Manejar el envío del formulario
 document.getElementById("task-form").addEventListener("submit", async (e) => {
   e.preventDefault();
