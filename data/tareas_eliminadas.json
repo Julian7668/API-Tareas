@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "titulo": "Revisar código de la API",
+    "descripcion": "Examinar el código fuente de la API para identificar posibles mejoras en la estructura y eficiencia.",
+    "completada": false,
+    "fecha_eliminacion": "2025-10-19T14:32:20.216363"
+  }
+]
