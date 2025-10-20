@@ -24,7 +24,7 @@ import logging
 
 from constants import ID_COUNTER_JSON
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # Función para obtener el próximo ID
@@ -55,16 +55,16 @@ def obtener_proximo_id() -> int:
 
     try:
         with open(ID_COUNTER_JSON, "r", encoding="utf-8") as file:
-            contador = json.load(file)
-            ultimo_id = contador.get("ultimo_id", 0)
+            contador: dict[str, int] = json.load(file)
+            ultimo_id: int = contador.get("ultimo_id", 0)
     except (FileNotFoundError, json.JSONDecodeError):
         logger.warning("Archivo de contador no encontrado, inicializando en 0")
         ultimo_id = 0
 
-    proximo_id = ultimo_id + 1
+    proximo_id: int = ultimo_id + 1
 
     # Actualizar el contador persistente
-    nuevo_contador = {"ultimo_id": proximo_id}
+    nuevo_contador: dict[str, int] = {"ultimo_id": proximo_id}
     with open(ID_COUNTER_JSON, "w", encoding="utf-8") as file:
         json.dump(nuevo_contador, file, indent=2, ensure_ascii=False)
 

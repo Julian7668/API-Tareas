@@ -20,7 +20,7 @@ import logging
 
 from utils import leer_eliminadas_json, escribir_datos_eliminadas
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # Función para guardar tarea eliminada
@@ -56,13 +56,13 @@ def guardar_eliminada(tarea_a_eliminar: dict[str, Any]) -> None:
     tarea_eliminada["fecha_eliminacion"] = datetime.now().isoformat()
 
     try:
-        data = leer_eliminadas_json()
+        data: list[dict[str, Any]] = leer_eliminadas_json()
 
         # Insertar en posición correcta para mantener orden por ID
-        id_tarea = tarea_eliminada["id"]
+        id_tarea: int = tarea_eliminada["id"]
         for i, tarea in enumerate(data):
             if tarea["id"] > id_tarea:
-                posicion = i
+                posicion: int = i
                 break
         else:
             posicion = len(data)

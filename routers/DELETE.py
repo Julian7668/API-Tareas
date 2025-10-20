@@ -32,8 +32,8 @@ from utils import (
     escribir_datos_eliminadas,
 )
 
-router = APIRouter()
-logger = logging.getLogger(__name__)
+router: APIRouter = APIRouter()
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # DELETE - Eliminar una tarea
@@ -67,11 +67,11 @@ def eliminar_tarea(tarea_id: int) -> dict[str, Any]:
         - La tarea puede ser restaurada usando POST /eliminadas/{id}
     """
     logger.info("Solicitud para eliminar tarea con ID: %s", tarea_id)
-    datos = leer_json()
+    datos: list[dict[str, Any]] = leer_json()
 
     for i, tarea in enumerate(datos):
         if tarea["id"] == tarea_id:
-            tarea_eliminada = datos.pop(i)
+            tarea_eliminada: dict[str, Any] = datos.pop(i)
 
             # Mover al historial de eliminadas con timestamp
             guardar_eliminada(tarea_eliminada)
@@ -121,12 +121,12 @@ def eliminar_tarea_completamente(tarea_id: int) -> dict[str, Any]:
     )
 
     # Leer el historial completo de eliminadas
-    datos_eliminadas = leer_eliminadas_json()
+    datos_eliminadas: list[dict[str, Any]] = leer_eliminadas_json()
 
     # Buscar y eliminar la tarea específica
     for i, tarea in enumerate(datos_eliminadas):
         if tarea["id"] == tarea_id:
-            tarea_eliminada = datos_eliminadas.pop(i)
+            tarea_eliminada: dict[str, Any] = datos_eliminadas.pop(i)
 
             # Persistir el historial actualizado
             try:

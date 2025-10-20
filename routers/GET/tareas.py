@@ -10,11 +10,12 @@ Funciones principales:
 """
 
 import logging
+from typing import Any
 from fastapi import HTTPException, APIRouter, Path
 from constants import Tarea
 from utils import leer_json
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 def registrar_rutas_tareas(router: APIRouter) -> None:
@@ -31,7 +32,7 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
         summary="Obtener todas las tareas",
         description="Retorna una lista con todas las tareas activas almacenadas en el sistema.",
     )
-    def obtener_tareas():
+    def obtener_tareas() -> list[dict[str, Any]]:
         """
         Obtiene todas las tareas activas del sistema.
 
@@ -49,7 +50,7 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
             ]
         """
         logger.info("Solicitud para obtener todas las tareas")
-        tareas = leer_json()
+        tareas: list[dict[str, Any]] = leer_json()
         logger.info("Tareas cargadas: %s items", len(tareas))
         return tareas
 
@@ -61,7 +62,7 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
     )
     def obtener_tarea(
         tarea_id: int = Path(..., description="ID único de la tarea a buscar", ge=1)
-    ):
+    ) -> dict[str, Any]:
         """
         Obtiene una tarea específica por su ID único.
 
@@ -83,7 +84,7 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
             }
         """
         logger.info("Solicitud para obtener tarea con ID: %s", tarea_id)
-        datos = leer_json()
+        datos: list[dict[str, Any]] = leer_json()
 
         for tarea in datos:
             if tarea["id"] == tarea_id:

@@ -10,11 +10,12 @@ Funciones principales:
 """
 
 import logging
+from typing import Any
 from fastapi import APIRouter, Path, HTTPException
 from constants import Tarea
 from utils import leer_eliminadas_json
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 def registrar_rutas_eliminadas(router: APIRouter) -> None:
@@ -30,7 +31,7 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
         summary="Obtener tareas eliminadas",
         description="Retorna una lista con todas las tareas eliminadas del sistema.",
     )
-    def obtener_tareas_eliminadas():
+    def obtener_tareas_eliminadas() -> list[dict[str, Any]]:
         """
         Obtiene todas las tareas eliminadas del sistema con información de auditoría.
 
@@ -49,7 +50,7 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
             ]
         """
         logger.info("Solicitud para obtener todas las tareas eliminadas")
-        tareas_eliminadas = leer_eliminadas_json()
+        tareas_eliminadas: list[dict[str, Any]] = leer_eliminadas_json()
         logger.info("Tareas eliminadas cargadas: %s items", len(tareas_eliminadas))
         return tareas_eliminadas
 
@@ -63,7 +64,7 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
         tarea_id: int = Path(
             ..., description="ID único de la tarea eliminada a buscar", ge=1
         )
-    ):
+    ) -> dict[str, Any]:
         """
         Obtiene una tarea eliminada específica por su ID único.
 
@@ -86,7 +87,7 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
             }
         """
         logger.info("Solicitud para obtener tarea eliminada con ID: %s", tarea_id)
-        datos = leer_eliminadas_json()
+        datos: list[dict[str, Any]] = leer_eliminadas_json()
 
         for tarea in datos:
             if tarea["id"] == tarea_id:

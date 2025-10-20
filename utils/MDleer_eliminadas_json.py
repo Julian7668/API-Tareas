@@ -20,7 +20,7 @@ import json
 import logging
 from constants import DELETED_JSON
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # Función para leer tareas eliminadas
@@ -54,7 +54,7 @@ def leer_eliminadas_json() -> list[dict[str, Any]]:
         return []
     try:
         with open(DELETED_JSON, "r", encoding="utf-8") as file:
-            data = json.load(file)
+            data: list[dict[str, Any]] = json.load(file)
             logger.debug("Tareas eliminadas leídas: %s elementos", len(data))
             return data
     except json.JSONDecodeError as e:

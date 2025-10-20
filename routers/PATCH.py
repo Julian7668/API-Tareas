@@ -14,13 +14,14 @@ Características:
 """
 
 import logging
+from typing import Any
 from fastapi import HTTPException, APIRouter
 
 from constants import Tarea, TareaUpdate
 from utils import leer_json, escribir_datos_tareas
 
-router = APIRouter()
-logger = logging.getLogger(__name__)
+router: APIRouter = APIRouter()
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # PATCH - Actualizar parcialmente una tarea
@@ -31,7 +32,7 @@ logger = logging.getLogger(__name__)
     description="Actualiza solo los campos especificados de una tarea existente. "
     "Los campos no proporcionados mantienen su valor actual.",
 )
-def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
+def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate) -> Tarea:
     """
     Actualiza parcialmente una tarea existente modificando solo los campos especificados.
 
@@ -60,7 +61,7 @@ def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
         {"titulo": "Nuevo título"}
     """
     logger.info("Solicitud para actualizar tarea parcial con ID: %s", tarea_id)
-    datos = leer_json()
+    datos: list[dict[str, Any]] = leer_json()
 
     for i, tarea_existente in enumerate(datos):
         if tarea_existente["id"] == tarea_id:
@@ -74,7 +75,7 @@ def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
 
             escribir_datos_tareas(datos)
             logger.info("Tarea %s actualizada parcialmente", tarea_id)
-            return datos[i]
+            return Tarea(**datos[i])
 
     logger.warning("Tarea %s no encontrada para actualización parcial", tarea_id)
     raise HTTPException(status_code=404, detail="Tarea no encontrada")

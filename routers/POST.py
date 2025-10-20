@@ -15,6 +15,7 @@ Características:
 """
 
 import logging
+from typing import Any
 from fastapi import APIRouter, HTTPException
 
 from constants import Tarea
@@ -25,8 +26,8 @@ from utils import (
     leer_eliminadas_json,
 )
 
-router = APIRouter()
-logger = logging.getLogger(__name__)
+router: APIRouter = APIRouter()
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # POST - Crear una nueva tarea
@@ -69,7 +70,7 @@ logger = logging.getLogger(__name__)
         },
     },
 )
-def crear_tarea(tarea: Tarea):
+def crear_tarea(tarea: Tarea) -> Tarea:
     """
     Crea una nueva tarea en el sistema asignando automáticamente un ID único.
 
@@ -93,10 +94,10 @@ def crear_tarea(tarea: Tarea):
         >>> print(creada.id)  # ID asignado automáticamente
     """
     logger.info("Solicitud para crear tarea: %s", tarea.titulo)
-    datos = leer_json()
+    datos: list[dict[str, Any]] = leer_json()
 
     # Asignar ID automáticamente usando contador persistente
-    nueva_tarea = tarea.model_dump()
+    nueva_tarea: dict[str, Any] = tarea.model_dump()
     nueva_tarea["id"] = obtener_proximo_id()
     logger.info("ID asignado: %s", nueva_tarea["id"])
 
@@ -105,7 +106,7 @@ def crear_tarea(tarea: Tarea):
     escribir_datos_tareas(datos)
     logger.info("Tarea creada exitosamente con ID: %s", nueva_tarea["id"])
     logger.debug("Retornando nueva_tarea: %s", nueva_tarea)
-    return nueva_tarea
+    return Tarea(**nueva_tarea)
 
 
 # POST - Restaurar una tarea eliminada
@@ -139,7 +140,7 @@ def crear_tarea(tarea: Tarea):
         },
     },
 )
-def restaurar_tarea(tarea_id: int):
+def restaurar_tarea(tarea_id: int) -> Tarea:
     """
     Restaura una tarea previamente eliminada moviéndola de vuelta a las tareas activas.
 
@@ -164,11 +165,11 @@ def restaurar_tarea(tarea_id: int):
     logger.info("Solicitud para restaurar tarea con ID: %s", tarea_id)
 
     # Leer datos actuales de tareas activas y eliminadas
-    datos = leer_json()
-    eliminadas = leer_eliminadas_json()
+    datos: list[dict[str, Any]] = leer_json()
+    eliminadas: list[dict[str, Any]] = leer_eliminadas_json()
 
     # Buscar y extraer la tarea del historial de eliminadas
-    tarea_a_restaurar = None
+    tarea_a_restaurar: dict[str, Any] | None = None
     for i, tarea in enumerate(eliminadas):
         if tarea["id"] == tarea_id:
             tarea_a_restaurar = eliminadas.pop(i)
@@ -179,15 +180,15 @@ def restaurar_tarea(tarea_id: int):
         raise HTTPException(status_code=404, detail="Tarea no encontrada en eliminadas")
 
     # Limpiar la tarea removiendo metadata de eliminación
-    tarea_restaurada = {
+    tarea_restaurada: dict[str, Any] = {
         k: v for k, v in tarea_a_restaurar.items() if k != "fecha_eliminacion"
     }
 
     # Insertar en posición correcta para mantener orden por ID
-    id_restaurado = tarea_restaurada["id"]
+    id_restaurado: int = tarea_restaurada["id"]
     for i, tarea in enumerate(datos):
         if tarea["id"] > id_restaurado:
-            posicion = i
+            posicion: int = i
             break
     else:
         posicion = len(datos)
@@ -204,4 +205,4 @@ def restaurar_tarea(tarea_id: int):
         json.dump(eliminadas, file, indent=2, ensure_ascii=False)
 
     logger.info("Tarea %s restaurada exitosamente", tarea_id)
-    return tarea_restaurada
+    return Tarea(**tarea_restaurada)

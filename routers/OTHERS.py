@@ -17,12 +17,12 @@ import logging
 from fastapi import APIRouter
 from fastapi.responses import FileResponse
 
-router = APIRouter()
-logger = logging.getLogger(__name__)
+router: APIRouter = APIRouter()
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 @router.get("/")
-def get_aplicacion():
+def get_aplicacion() -> FileResponse:
     """
     Sirve la aplicación frontend principal (index.html).
 
@@ -38,5 +38,5 @@ def get_aplicacion():
         - La aplicación incluye interfaz para gestionar tareas vía API
     """
     logger.info("Solicitud para servir la aplicación")
-    static_path = os.path.join(os.path.dirname(__file__), "../static/index.html")
+    static_path: str = os.path.join(os.path.dirname(__file__), "../static/index.html")
     return FileResponse(static_path)

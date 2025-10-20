@@ -16,12 +16,12 @@ El módulo crea automáticamente el directorio de datos si no existe.
 import os
 
 # Directorio de datos - se crea automáticamente si no existe
-DIR_DATA = os.path.join(os.path.dirname(__file__), "../data")
+DIR_DATA: str = os.path.join(os.path.dirname(__file__), "../data")
 
 # Archivos JSON donde se almacenan los datos persistentes
-DATA_JSON = os.path.join(DIR_DATA, "tareas.json")  # Tareas activas
-DELETED_JSON = os.path.join(DIR_DATA, "tareas_eliminadas.json")  # Historial de eliminadas
-ID_COUNTER_JSON = os.path.join(DIR_DATA, "contador_id.json")  # Contador de IDs únicos
+DATA_JSON: str = os.path.join(DIR_DATA, "tareas.json")  # Tareas activas
+DELETED_JSON: str = os.path.join(DIR_DATA, "tareas_eliminadas.json")  # Historial de eliminadas
+ID_COUNTER_JSON: str = os.path.join(DIR_DATA, "contador_id.json")  # Contador de IDs únicos
 
 # Crear el directorio de datos si no existe
 # Esto asegura que la aplicación pueda ejecutarse sin configuración manual

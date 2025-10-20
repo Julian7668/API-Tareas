@@ -20,7 +20,7 @@ import logging
 from typing import Any
 from constants import DATA_JSON
 
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # Función para leer datos del archivo JSON
@@ -52,7 +52,7 @@ def leer_json() -> list[dict[str, Any]]:
         return []
     try:
         with open(DATA_JSON, "r", encoding="utf-8") as file:
-            data = json.load(file)
+            data: list[dict[str, Any]] = json.load(file)
             logger.debug("Datos leídos: %s elementos", len(data))
             return data
     except json.JSONDecodeError as e:

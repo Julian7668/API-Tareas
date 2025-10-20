@@ -19,7 +19,7 @@ from fastapi import APIRouter
 from .tareas import registrar_rutas_tareas
 from .eliminadas import registrar_rutas_eliminadas
 
-router = APIRouter()
+router: APIRouter = APIRouter()
 
 # Registrar todas las rutas en el router principal
 # Se organizan las rutas por contexto para mejor mantenibilidad

@@ -25,7 +25,7 @@ from fastapi.staticfiles import StaticFiles
 from routers import GET, POST, PUT, PATCH, DELETE, OTHERS
 
 # Crear directorio de logs si no existe
-log_dir = os.path.join(os.path.dirname(__file__), "logs")
+log_dir: str = os.path.join(os.path.dirname(__file__), "logs")
 os.makedirs(log_dir, exist_ok=True)
 
 # Configurar logging
@@ -39,12 +39,12 @@ logging.basicConfig(
         logging.StreamHandler(),
     ],
 )
-logger = logging.getLogger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 # Crear la aplicación FastAPI
 # Se inicializa la aplicación con metadatos para documentación automática
 logger.info("Creando aplicación FastAPI")
-app = FastAPI(
+app: FastAPI = FastAPI(
     title="API de Tareas",
     description="API RESTful para gestión completa de tareas con operaciones CRUD, validación de datos y auditoría.",
     version="1.0.0",
@@ -77,7 +77,7 @@ app.include_router(OTHERS.router, tags=["🌟 General"])
 # Static files
 # Montar directorio de archivos estáticos para servir frontend
 logger.info("Montando archivos estáticos")
-static_dir = os.path.join(os.path.dirname(__file__), "static")
+static_dir: str = os.path.join(os.path.dirname(__file__), "static")
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 if __name__ == "__main__":

@@ -14,13 +14,14 @@ Características:
 """
 
 import logging
+from typing import Any
 from fastapi import HTTPException, APIRouter
 
 from constants import Tarea
 from utils import leer_json, escribir_datos_tareas
 
-router = APIRouter()
-logger = logging.getLogger(__name__)
+router: APIRouter = APIRouter()
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 # PUT - Actualizar una tarea completa
@@ -31,7 +32,7 @@ logger = logging.getLogger(__name__)
     description="Reemplaza completamente una tarea existente con nuevos datos. "
     "Todos los campos deben ser proporcionados.",
 )
-def actualizar_tarea_completa(tarea_id: int, tarea: Tarea):
+def actualizar_tarea_completa(tarea_id: int, tarea: Tarea) -> Tarea:
     """
     Actualiza completamente una tarea existente reemplazando todos sus campos.
 
@@ -56,17 +57,17 @@ def actualizar_tarea_completa(tarea_id: int, tarea: Tarea):
         - La validación Pydantic se aplica a los nuevos datos
     """
     logger.info("Solicitud para actualizar tarea completa con ID: %s", tarea_id)
-    datos = leer_json()
+    datos: list[dict[str, Any]] = leer_json()
 
     for i, tarea_existente in enumerate(datos):
         if tarea_existente["id"] == tarea_id:
             # Preparar actualización manteniendo el ID original
-            tarea_actualizada = tarea.model_dump()
+            tarea_actualizada: dict[str, Any] = tarea.model_dump()
             tarea_actualizada["id"] = tarea_id
             datos[i] = tarea_actualizada
             escribir_datos_tareas(datos)
             logger.info("Tarea %s actualizada completamente", tarea_id)
-            return tarea_actualizada
+            return Tarea(**tarea_actualizada)
 
     logger.warning("Tarea %s no encontrada para actualización completa", tarea_id)
     raise HTTPException(status_code=404, detail="Tarea no encontrada")
