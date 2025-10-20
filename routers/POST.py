@@ -1,8 +1,17 @@
 """
 Router para operaciones POST
 
-Este módulo contiene las rutas para crear nuevas tareas en el sistema.
-Asigna automáticamente IDs únicos a las nuevas tareas.
+Este módulo contiene las rutas para crear nuevas tareas en el sistema
+y restaurar tareas previamente eliminadas.
+
+Funciones principales:
+- crear_tarea(): Crea una nueva tarea asignando ID automáticamente
+- restaurar_tarea(): Restaura una tarea eliminada a las tareas activas
+
+Características:
+- Asignación automática de IDs únicos usando contador persistente
+- Validación completa de datos usando modelos Pydantic
+- Logging detallado de todas las operaciones
 """
 
 import logging
@@ -62,23 +71,36 @@ logger = logging.getLogger(__name__)
 )
 def crear_tarea(tarea: Tarea):
     """
-    Crea una nueva tarea en el sistema.
+    Crea una nueva tarea en el sistema asignando automáticamente un ID único.
+
+    El ID se genera usando un contador persistente que asegura unicidad
+    incluso después de eliminaciones. La tarea se valida completamente
+    antes de ser almacenada.
 
     Args:
-        tarea (Tarea): Los datos de la nueva tarea (sin ID, se asigna automáticamente).
+        tarea (Tarea): Los datos de la nueva tarea sin ID (se asigna automáticamente).
+                      Debe incluir titulo, descripcion y opcionalmente completada.
 
     Returns:
-        Tarea: La tarea creada con su ID asignado.
+        Tarea: La tarea creada completa con su ID asignado.
+
+    Raises:
+        HTTPException: Si hay errores de validación en los datos proporcionados.
+
+    Ejemplo:
+        >>> tarea = Tarea(titulo="Nueva tarea", descripcion="Descripción")
+        >>> creada = crear_tarea(tarea)
+        >>> print(creada.id)  # ID asignado automáticamente
     """
     logger.info("Solicitud para crear tarea: %s", tarea.titulo)
     datos = leer_json()
 
-    # Asignar ID automáticamente
+    # Asignar ID automáticamente usando contador persistente
     nueva_tarea = tarea.model_dump()
     nueva_tarea["id"] = obtener_proximo_id()
     logger.info("ID asignado: %s", nueva_tarea["id"])
 
-    # Agregar la nueva tarea a los datos
+    # Agregar la nueva tarea a los datos y persistir
     datos.append(nueva_tarea)
     escribir_datos_tareas(datos)
     logger.info("Tarea creada exitosamente con ID: %s", nueva_tarea["id"])
@@ -119,24 +141,33 @@ def crear_tarea(tarea: Tarea):
 )
 def restaurar_tarea(tarea_id: int):
     """
-    Restaura una tarea eliminada moviéndola de vuelta a las tareas activas.
+    Restaura una tarea previamente eliminada moviéndola de vuelta a las tareas activas.
+
+    La tarea se busca en el historial de eliminadas, se remueve la marca de tiempo
+    de eliminación y se inserta en la posición correcta del archivo de tareas activas
+    para mantener el orden por ID.
 
     Args:
-        tarea_id (int): ID de la tarea a restaurar.
+        tarea_id (int): ID único de la tarea a restaurar.
 
     Returns:
-        Tarea: La tarea restaurada.
+        Tarea: La tarea restaurada sin la fecha de eliminación.
 
     Raises:
-        HTTPException: Si la tarea no se encuentra en las eliminadas.
+        HTTPException: Si la tarea no se encuentra en el historial de eliminadas (404).
+
+    Notas:
+        - La tarea restaurada mantiene su ID original
+        - Se inserta en orden para preservar la secuencia por ID
+        - El historial de eliminadas se actualiza automáticamente
     """
     logger.info("Solicitud para restaurar tarea con ID: %s", tarea_id)
 
-    # Leer tareas activas y eliminadas
+    # Leer datos actuales de tareas activas y eliminadas
     datos = leer_json()
     eliminadas = leer_eliminadas_json()
 
-    # Buscar la tarea en eliminadas
+    # Buscar y extraer la tarea del historial de eliminadas
     tarea_a_restaurar = None
     for i, tarea in enumerate(eliminadas):
         if tarea["id"] == tarea_id:
@@ -147,12 +178,12 @@ def restaurar_tarea(tarea_id: int):
         logger.warning("Tarea %s no encontrada en eliminadas", tarea_id)
         raise HTTPException(status_code=404, detail="Tarea no encontrada en eliminadas")
 
-    # Remover la fecha de eliminación
+    # Limpiar la tarea removiendo metadata de eliminación
     tarea_restaurada = {
         k: v for k, v in tarea_a_restaurar.items() if k != "fecha_eliminacion"
     }
 
-    # Insertar la tarea en la posición correcta para mantener el orden por ID
+    # Insertar en posición correcta para mantener orden por ID
     id_restaurado = tarea_restaurada["id"]
     for i, tarea in enumerate(datos):
         if tarea["id"] > id_restaurado:
@@ -162,8 +193,9 @@ def restaurar_tarea(tarea_id: int):
         posicion = len(datos)
     datos.insert(posicion, tarea_restaurada)
 
-    # Guardar cambios
+    # Persistir cambios en ambos archivos
     escribir_datos_tareas(datos)
+
     # Actualizar archivo de eliminadas (sin la tarea restaurada)
     import json
     from constants import DELETED_JSON

@@ -1,5 +1,12 @@
 """
 Rutas GET para tareas activas
+
+Este módulo define las rutas para consultar tareas activas en el sistema.
+Proporciona endpoints para obtener todas las tareas o una tarea específica por ID.
+
+Funciones principales:
+- obtener_tareas(): Lista todas las tareas activas
+- obtener_tarea(): Obtiene una tarea específica por su ID
 """
 
 import logging
@@ -25,6 +32,22 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
         description="Retorna una lista con todas las tareas activas almacenadas en el sistema.",
     )
     def obtener_tareas():
+        """
+        Obtiene todas las tareas activas del sistema.
+
+        Returns:
+            list[Tarea]: Lista de todas las tareas activas con sus detalles completos.
+
+        Ejemplo de respuesta:
+            [
+                {
+                    "id": 1,
+                    "titulo": "Aprender FastAPI",
+                    "descripcion": "Estudiar conceptos básicos",
+                    "completada": false
+                }
+            ]
+        """
         logger.info("Solicitud para obtener todas las tareas")
         tareas = leer_json()
         logger.info("Tareas cargadas: %s items", len(tareas))
@@ -39,6 +62,26 @@ def registrar_rutas_tareas(router: APIRouter) -> None:
     def obtener_tarea(
         tarea_id: int = Path(..., description="ID único de la tarea a buscar", ge=1)
     ):
+        """
+        Obtiene una tarea específica por su ID único.
+
+        Args:
+            tarea_id (int): ID único de la tarea a buscar. Debe ser mayor o igual a 1.
+
+        Returns:
+            Tarea: Los detalles completos de la tarea encontrada.
+
+        Raises:
+            HTTPException: Si la tarea con el ID especificado no existe (404).
+
+        Ejemplo de respuesta:
+            {
+                "id": 1,
+                "titulo": "Aprender FastAPI",
+                "descripcion": "Estudiar conceptos básicos",
+                "completada": false
+            }
+        """
         logger.info("Solicitud para obtener tarea con ID: %s", tarea_id)
         datos = leer_json()
 

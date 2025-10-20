@@ -852,3 +852,16 @@
 2025-10-19 19:14:18,760 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
 2025-10-19 19:14:25,096 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
 2025-10-19 19:14:25,097 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:20:32,523 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 19:20:32,529 - __main__ - INFO - Configurando CORS
+2025-10-19 19:20:32,529 - __main__ - INFO - Registrando routers
+2025-10-19 19:20:32,593 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 19:20:33,013 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 19:30:24,750 - main - INFO - Creando aplicación FastAPI
+2025-10-19 19:30:24,751 - main - INFO - Configurando CORS
+2025-10-19 19:30:24,751 - main - INFO - Registrando routers
+2025-10-19 19:30:24,767 - main - INFO - Montando archivos estáticos
+2025-10-19 19:30:33,665 - main - INFO - Creando aplicación FastAPI
+2025-10-19 19:30:33,666 - main - INFO - Configurando CORS
+2025-10-19 19:30:33,666 - main - INFO - Registrando routers
+2025-10-19 19:30:33,682 - main - INFO - Montando archivos estáticos

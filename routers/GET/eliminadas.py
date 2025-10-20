@@ -1,5 +1,12 @@
 """
 Rutas GET para tareas eliminadas
+
+Este módulo define las rutas para consultar tareas eliminadas en el sistema.
+Proporciona endpoints para obtener todas las tareas eliminadas o una específica por ID.
+
+Funciones principales:
+- obtener_tareas_eliminadas(): Lista todas las tareas eliminadas con timestamps
+- obtener_tarea_eliminada(): Obtiene una tarea eliminada específica por su ID
 """
 
 import logging
@@ -24,6 +31,23 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
         description="Retorna una lista con todas las tareas eliminadas del sistema.",
     )
     def obtener_tareas_eliminadas():
+        """
+        Obtiene todas las tareas eliminadas del sistema con información de auditoría.
+
+        Returns:
+            list[dict]: Lista de todas las tareas eliminadas incluyendo fecha de eliminación.
+
+        Ejemplo de respuesta:
+            [
+                {
+                    "id": 1,
+                    "titulo": "Tarea eliminada",
+                    "descripcion": "Esta tarea fue eliminada",
+                    "completada": false,
+                    "fecha_eliminacion": "2023-01-01T12:00:00"
+                }
+            ]
+        """
         logger.info("Solicitud para obtener todas las tareas eliminadas")
         tareas_eliminadas = leer_eliminadas_json()
         logger.info("Tareas eliminadas cargadas: %s items", len(tareas_eliminadas))
@@ -40,6 +64,27 @@ def registrar_rutas_eliminadas(router: APIRouter) -> None:
             ..., description="ID único de la tarea eliminada a buscar", ge=1
         )
     ):
+        """
+        Obtiene una tarea eliminada específica por su ID único.
+
+        Args:
+            tarea_id (int): ID único de la tarea eliminada a buscar. Debe ser mayor o igual a 1.
+
+        Returns:
+            dict: Los detalles completos de la tarea eliminada incluyendo fecha de eliminación.
+
+        Raises:
+            HTTPException: Si la tarea eliminada con el ID especificado no existe (404).
+
+        Ejemplo de respuesta:
+            {
+                "id": 1,
+                "titulo": "Tarea eliminada",
+                "descripcion": "Esta tarea fue eliminada",
+                "completada": false,
+                "fecha_eliminacion": "2023-01-01T12:00:00"
+            }
+        """
         logger.info("Solicitud para obtener tarea eliminada con ID: %s", tarea_id)
         datos = leer_eliminadas_json()
 

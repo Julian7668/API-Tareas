@@ -2,7 +2,17 @@
 Router para operaciones DELETE
 
 Este módulo contiene las rutas para eliminar tareas del sistema.
-Las tareas eliminadas se mueven a un historial para auditoría.
+Las tareas eliminadas se mueven a un historial para auditoría y posible restauración.
+
+Funciones principales:
+- eliminar_tarea(): Elimina una tarea moviéndola al historial
+- eliminar_tarea_completamente(): Elimina permanentemente del historial
+
+Características:
+- Auditoría completa con timestamps de eliminación
+- Historial persistente de tareas eliminadas
+- Eliminación permanente opcional
+- Logging detallado de todas las operaciones
 """
 
 import logging
@@ -35,16 +45,26 @@ logger = logging.getLogger(__name__)
 )
 def eliminar_tarea(tarea_id: int) -> dict[str, Any]:
     """
-    Elimina una tarea específica del sistema.
+    Elimina una tarea específica del sistema moviéndola al historial de eliminadas.
+
+    Esta función no elimina permanentemente la tarea, sino que la mueve a un
+    historial de auditoría con marca de tiempo. La tarea puede ser restaurada
+    posteriormente si es necesario.
 
     Args:
-        tarea_id (int): ID de la tarea a eliminar.
+        tarea_id (int): ID único de la tarea a eliminar.
 
     Returns:
-        dict[str, Any]: Diccionario con mensaje de confirmación y datos de la tarea eliminada.
+        dict[str, Any]: Diccionario con mensaje de confirmación y los datos
+                        completos de la tarea eliminada.
 
     Raises:
-        HTTPException: Si la tarea no se encuentra (404).
+        HTTPException: Si la tarea con el ID especificado no existe (404).
+
+    Notas:
+        - La tarea permanece accesible en el endpoint /eliminadas
+        - Se registra timestamp de eliminación para auditoría
+        - La tarea puede ser restaurada usando POST /eliminadas/{id}
     """
     logger.info("Solicitud para eliminar tarea con ID: %s", tarea_id)
     datos = leer_json()
@@ -53,10 +73,10 @@ def eliminar_tarea(tarea_id: int) -> dict[str, Any]:
         if tarea["id"] == tarea_id:
             tarea_eliminada = datos.pop(i)
 
-            # Guardar en historial de eliminadas
+            # Mover al historial de eliminadas con timestamp
             guardar_eliminada(tarea_eliminada)
 
-            # Actualizar archivo principal
+            # Actualizar archivo de tareas activas
             escribir_datos_tareas(datos)
 
             logger.info("Tarea %s eliminada exitosamente", tarea_id)
@@ -77,32 +97,38 @@ def eliminar_tarea_completamente(tarea_id: int) -> dict[str, Any]:
     """
     Elimina permanentemente una tarea del historial de eliminadas.
 
-    Esta función es para limpiar completamente el sistema de tareas que
-    ya no necesitas en ningún registro. El ID se perderá pero no se reutilizará
-    automáticamente, manteniendo la secuencia incremental intacta.
+    Esta función realiza una eliminación irreversible del sistema. Una vez ejecutada,
+    la tarea se pierde completamente y no puede ser recuperada. El ID queda liberado
+    pero no se reutiliza automáticamente para mantener la integridad histórica.
 
     Args:
-        tarea_id (int): ID de la tarea a eliminar permanentemente.
+        tarea_id (int): ID único de la tarea a eliminar permanentemente del historial.
 
     Returns:
-        dict[str, Any]: Mensaje de confirmación con datos de la tarea eliminada.
+        dict[str, Any]: Diccionario con mensaje de confirmación, advertencia sobre
+                       la irreversibilidad de la acción y datos de la tarea eliminada.
 
     Raises:
-        HTTPException: Si la tarea no se encuentra en el historial (404).
+        HTTPException: Si la tarea no se encuentra en el historial de eliminadas (404).
+
+    Advertencias:
+        - Esta acción NO se puede deshacer
+        - La tarea se pierde permanentemente del sistema
+        - Solo debe usarse para limpieza definitiva de datos
     """
     logger.warning(
         "Solicitud de ELIMINACIÓN PERMANENTE para tarea con ID: %s", tarea_id
     )
 
-    # Leer el historial de eliminadas
+    # Leer el historial completo de eliminadas
     datos_eliminadas = leer_eliminadas_json()
 
-    # Buscar y eliminar la tarea
+    # Buscar y eliminar la tarea específica
     for i, tarea in enumerate(datos_eliminadas):
         if tarea["id"] == tarea_id:
             tarea_eliminada = datos_eliminadas.pop(i)
 
-            # Guardar el archivo actualizado de eliminadas
+            # Persistir el historial actualizado
             try:
                 escribir_datos_eliminadas(datos_eliminadas)
 

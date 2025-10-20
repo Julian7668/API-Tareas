@@ -3,6 +3,14 @@ Router para operaciones PATCH
 
 Este módulo contiene las rutas para actualizar parcialmente tareas existentes.
 Permite modificar solo los campos especificados sin afectar los demás.
+
+Funciones principales:
+- actualizar_tarea_parcial(): Modifica solo campos específicos de una tarea
+
+Características:
+- Actualización parcial: solo campos proporcionados se modifican
+- Campos opcionales: titulo, descripcion, completada
+- Mantiene valores existentes para campos no especificados
 """
 
 import logging
@@ -25,24 +33,38 @@ logger = logging.getLogger(__name__)
 )
 def actualizar_tarea_parcial(tarea_id: int, tarea_update: TareaUpdate):
     """
-    Actualiza parcialmente una tarea existente.
+    Actualiza parcialmente una tarea existente modificando solo los campos especificados.
+
+    Esta función permite actualizaciones selectivas donde solo los campos proporcionados
+    en la solicitud se modifican. Los campos no incluidos mantienen sus valores actuales.
+    Es útil para operaciones como marcar una tarea como completada sin cambiar el título.
 
     Args:
-        tarea_id (int): ID de la tarea a actualizar.
-        tarea_update (TareaUpdate): Campos a actualizar (solo los proporcionados se modifican).
+        tarea_id (int): ID único de la tarea a actualizar parcialmente.
+        tarea_update (TareaUpdate): Objeto con los campos a actualizar. Solo los campos
+                                    no None serán modificados en la tarea existente.
 
     Returns:
-        Tarea: La tarea actualizada con todos sus campos.
+        Tarea: La tarea actualizada con todos sus campos (modificados y no modificados).
 
     Raises:
-        HTTPException: Si la tarea no se encuentra (404).
+        HTTPException: Si la tarea con el ID especificado no existe (404).
+
+    Ejemplo:
+        Para marcar una tarea como completada:
+        PATCH /tareas/1
+        {"completada": true}
+
+        Para cambiar solo el título:
+        PATCH /tareas/1
+        {"titulo": "Nuevo título"}
     """
     logger.info("Solicitud para actualizar tarea parcial con ID: %s", tarea_id)
     datos = leer_json()
 
     for i, tarea_existente in enumerate(datos):
         if tarea_existente["id"] == tarea_id:
-            # Actualizar solo los campos proporcionados
+            # Aplicar actualizaciones solo a campos proporcionados
             if tarea_update.titulo is not None:
                 datos[i]["titulo"] = tarea_update.titulo
             if tarea_update.descripcion is not None:
