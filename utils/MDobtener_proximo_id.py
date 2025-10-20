@@ -2,13 +2,18 @@
 Módulo para generar IDs únicos para nuevas tareas
 
 Este módulo proporciona funciones para calcular el próximo ID disponible
-basándose en tareas activas y eliminadas para evitar colisiones.
+usando un contador persistente para evitar colisiones.
 """
 
-from typing import Any
+import json
 import logging
 
-from utils import leer_json, leer_eliminadas_json
+# import sys
+# import os
+
+# sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+
+from constants import ID_COUNTER_JSON
 
 logger = logging.getLogger(__name__)
 
@@ -18,24 +23,32 @@ def obtener_proximo_id() -> int:
     """
     Calcula el próximo ID disponible para una nueva tarea.
 
-    Revisa tanto las tareas activas como las eliminadas para encontrar
-    el ID más alto y retorna el siguiente número disponible.
+    Usa un contador persistente para asegurar que los IDs sean únicos
+    y no se repitan incluso después de eliminaciones permanentes.
 
     Returns:
-        int: El próximo ID disponible (comienza en 1 si no hay tareas).
+        int: El próximo ID disponible.
     """
     logger.debug("Obteniendo próximo ID disponible")
-    datos: list[dict[str, Any]] = leer_json()
-    datos_eliminados: list[dict[str, Any]] = leer_eliminadas_json()
 
-    # Combinar todos los IDs existentes
-    todos_los_ids: list[int] = []
+    try:
+        with open(ID_COUNTER_JSON, "r", encoding="utf-8") as file:
+            contador = json.load(file)
+            ultimo_id = contador.get("ultimo_id", 0)
+    except (FileNotFoundError, json.JSONDecodeError):
+        logger.warning("Archivo de contador no encontrado, inicializando en 0")
+        ultimo_id = 0
 
-    if datos:
-        todos_los_ids.extend(tarea["id"] for tarea in datos)
-    if datos_eliminados:
-        todos_los_ids.extend(tarea["id"] for tarea in datos_eliminados)
+    proximo_id = ultimo_id + 1
 
-    proximo_id = max(todos_los_ids) + 1 if todos_los_ids else 1
+    # Actualizar el contador
+    nuevo_contador = {"ultimo_id": proximo_id}
+    with open(ID_COUNTER_JSON, "w", encoding="utf-8") as file:
+        json.dump(nuevo_contador, file, indent=2, ensure_ascii=False)
+
     logger.debug("Próximo ID calculado: %s", proximo_id)
     return proximo_id
+
+
+if __name__ == "__main__":
+    print("Próximo ID disponible:", obtener_proximo_id())

@@ -1,9 +1,16 @@
 [
   {
-    "id": 11,
-    "titulo": "31324",
-    "descripcion": "ewe1",
+    "id": 2,
+    "titulo": "Practicar ejercicios de lógica proposicional",
+    "descripcion": "Resolver al menos 15 ejercicios de tablas de verdad y equivalencias lógicas para fortalecer el pensamiento algorítmico",
+    "completada": true,
+    "fecha_eliminacion": "2025-10-19T19:05:26.905546"
+  },
+  {
+    "id": 8,
+    "titulo": "Implementar validaciones adicionales en modelos Pydantic",
+    "descripcion": "Agregar validators personalizados para asegurar la calidad de los datos que entran a la API, especialmente en títulos y descripciones",
     "completada": false,
-    "fecha_eliminacion": "2025-10-19T18:43:06.920831"
+    "fecha_eliminacion": "2025-10-19T19:12:54.085106"
   }
 ]

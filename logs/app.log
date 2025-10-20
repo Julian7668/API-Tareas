@@ -737,3 +737,118 @@
 2025-10-19 18:43:08,105 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 1 items
 2025-10-19 18:43:09,678 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
 2025-10-19 18:43:09,679 - routers.GET.tareas - INFO - Tareas cargadas: 10 items
+2025-10-19 19:04:22,869 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 19:04:22,873 - __main__ - INFO - Configurando CORS
+2025-10-19 19:04:22,873 - __main__ - INFO - Registrando routers
+2025-10-19 19:04:22,918 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 19:04:23,097 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 19:04:35,317 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 19:04:36,327 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:04:36,330 - routers.GET.tareas - INFO - Tareas cargadas: 10 items
+2025-10-19 19:04:46,855 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:04:46,856 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 19:04:49,086 - routers.DELETE - WARNING - Solicitud de ELIMINACIÓN PERMANENTE para tarea con ID: 11
+2025-10-19 19:04:49,089 - routers.DELETE - WARNING - Tarea 11 ELIMINADA PERMANENTEMENTE del historial
+2025-10-19 19:04:49,112 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:04:49,113 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 0 items
+2025-10-19 19:04:51,608 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:04:51,610 - routers.GET.tareas - INFO - Tareas cargadas: 10 items
+2025-10-19 19:04:58,027 - routers.POST - INFO - Solicitud para crear tarea: asdasd
+2025-10-19 19:04:58,032 - routers.POST - INFO - ID asignado: 12
+2025-10-19 19:04:58,036 - routers.POST - INFO - Tarea creada exitosamente con ID: 12
+2025-10-19 19:04:58,058 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:04:58,078 - routers.GET.tareas - INFO - Tareas cargadas: 11 items
+2025-10-19 19:05:09,647 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 12
+2025-10-19 19:05:09,648 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 12
+2025-10-19 19:05:09,651 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:05:09,655 - routers.DELETE - INFO - Tarea 12 eliminada exitosamente
+2025-10-19 19:05:09,681 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:09,684 - routers.GET.tareas - INFO - Tareas cargadas: 10 items
+2025-10-19 19:05:10,783 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:05:10,804 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 19:05:12,877 - routers.DELETE - WARNING - Solicitud de ELIMINACIÓN PERMANENTE para tarea con ID: 12
+2025-10-19 19:05:12,880 - routers.DELETE - WARNING - Tarea 12 ELIMINADA PERMANENTEMENTE del historial
+2025-10-19 19:05:12,901 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:05:12,903 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 0 items
+2025-10-19 19:05:14,216 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:14,217 - routers.GET.tareas - INFO - Tareas cargadas: 10 items
+2025-10-19 19:05:17,342 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 5
+2025-10-19 19:05:17,344 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 5
+2025-10-19 19:05:17,347 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:05:17,351 - routers.DELETE - INFO - Tarea 5 eliminada exitosamente
+2025-10-19 19:05:17,381 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:17,407 - routers.GET.tareas - INFO - Tareas cargadas: 9 items
+2025-10-19 19:05:19,277 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:05:19,298 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 19:05:21,165 - routers.DELETE - WARNING - Solicitud de ELIMINACIÓN PERMANENTE para tarea con ID: 5
+2025-10-19 19:05:21,167 - routers.DELETE - WARNING - Tarea 5 ELIMINADA PERMANENTEMENTE del historial
+2025-10-19 19:05:21,186 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:05:21,187 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 0 items
+2025-10-19 19:05:21,864 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:21,866 - routers.GET.tareas - INFO - Tareas cargadas: 9 items
+2025-10-19 19:05:24,853 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 4
+2025-10-19 19:05:24,854 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 4
+2025-10-19 19:05:24,856 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:05:24,860 - routers.DELETE - INFO - Tarea 4 eliminada exitosamente
+2025-10-19 19:05:24,885 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:24,908 - routers.GET.tareas - INFO - Tareas cargadas: 8 items
+2025-10-19 19:05:26,903 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 2
+2025-10-19 19:05:26,905 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 2
+2025-10-19 19:05:26,923 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:05:26,927 - routers.DELETE - INFO - Tarea 2 eliminada exitosamente
+2025-10-19 19:05:26,947 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:05:26,965 - routers.GET.tareas - INFO - Tareas cargadas: 7 items
+2025-10-19 19:05:28,695 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:05:28,716 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:12:23,923 - __main__ - INFO - Creando aplicación FastAPI
+2025-10-19 19:12:23,927 - __main__ - INFO - Configurando CORS
+2025-10-19 19:12:23,928 - __main__ - INFO - Registrando routers
+2025-10-19 19:12:23,972 - __main__ - INFO - Montando archivos estáticos
+2025-10-19 19:12:24,125 - __main__ - INFO - Iniciando servidor Uvicorn en 127.0.0.1:8000
+2025-10-19 19:12:36,733 - routers.DELETE - WARNING - Solicitud de ELIMINACIÓN PERMANENTE para tarea con ID: 4
+2025-10-19 19:12:36,740 - routers.DELETE - WARNING - Tarea 4 ELIMINADA PERMANENTEMENTE del historial
+2025-10-19 19:12:36,762 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:12:36,777 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 1 items
+2025-10-19 19:12:43,486 - routers.OTHERS - INFO - Solicitud para servir la aplicación
+2025-10-19 19:12:43,974 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:12:43,976 - routers.GET.tareas - INFO - Tareas cargadas: 7 items
+2025-10-19 19:12:54,083 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 8
+2025-10-19 19:12:54,085 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 8
+2025-10-19 19:12:54,087 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:12:54,089 - routers.DELETE - INFO - Tarea 8 eliminada exitosamente
+2025-10-19 19:12:54,109 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:12:54,132 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:12:56,822 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:12:56,846 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:12:58,621 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:12:58,623 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:13:12,851 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:13:12,853 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:13:14,437 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:13:14,440 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:13:20,082 - routers.DELETE - INFO - Solicitud para eliminar tarea con ID: 3
+2025-10-19 19:13:20,084 - utils.MDguardar_eliminada - INFO - Guardando tarea eliminada con ID: 3
+2025-10-19 19:13:20,088 - utils.MDguardar_eliminada - INFO - Tarea eliminada guardada exitosamente
+2025-10-19 19:13:20,093 - routers.DELETE - INFO - Tarea 3 eliminada exitosamente
+2025-10-19 19:13:20,123 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:13:20,139 - routers.GET.tareas - INFO - Tareas cargadas: 5 items
+2025-10-19 19:13:21,986 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:13:22,008 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 3 items
+2025-10-19 19:13:26,296 - routers.POST - INFO - Solicitud para restaurar tarea con ID: 3
+2025-10-19 19:13:26,302 - routers.POST - INFO - Tarea 3 restaurada exitosamente
+2025-10-19 19:13:26,336 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:13:26,344 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:13:27,969 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:13:27,974 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:13:32,866 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:13:32,869 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:13:35,437 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:13:35,439 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:13:45,626 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:13:45,628 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:13:54,193 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:13:54,195 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
+2025-10-19 19:14:18,759 - routers.GET.eliminadas - INFO - Solicitud para obtener todas las tareas eliminadas
+2025-10-19 19:14:18,760 - routers.GET.eliminadas - INFO - Tareas eliminadas cargadas: 2 items
+2025-10-19 19:14:25,096 - routers.GET.tareas - INFO - Solicitud para obtener todas las tareas
+2025-10-19 19:14:25,097 - routers.GET.tareas - INFO - Tareas cargadas: 6 items
