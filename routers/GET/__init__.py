@@ -16,8 +16,8 @@ tareas.py y eliminadas.py para mantener la organización del código.
 
 from fastapi import APIRouter
 
-from .tareas import registrar_rutas_tareas
-from .eliminadas import registrar_rutas_eliminadas
+from .GETtareas import registrar_rutas_tareas
+from .GETeliminadas import registrar_rutas_eliminadas
 
 router: APIRouter = APIRouter()
 
